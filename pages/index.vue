@@ -3,10 +3,10 @@
     <div>
       <app-logo/>
       <h1 class="title">
-        dianthus-karuta
+        dk
       </h1>
       <h2 class="subtitle">
-        Emily Stewart fansite.
+        Emily Steward fansite.
       </h2>
       <div class="links">
         <a

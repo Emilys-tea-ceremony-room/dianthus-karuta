@@ -1,7 +1,7 @@
 {
-  "name": "dianthus-karuta",
+  "name": "dk",
   "version": "1.0.0",
-  "description": "Emily Stewart fansite.",
+  "description": "Emily Steward fansite.",
   "author": "ArLE <ARLEQUIN.prx@gmail.com>",
   "private": true,
   "scripts": {

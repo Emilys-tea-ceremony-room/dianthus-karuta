@@ -1,6 +1,6 @@
-# dianthus-karuta
+# dk
 
-> Emily Stewart fansite.
+> Emily Steward fansite.
 
 ## Build Setup
 
