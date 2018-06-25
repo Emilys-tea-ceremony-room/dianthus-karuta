@@ -5,18 +5,14 @@
         <a
           href="https://twitter.com/Emily_Discord/"
           target="_blank">
-          <img 
-            src="" 
-            alt="Twitter">
+          <i class="fab fa-twitter"/>
         </a>
       </li>
       <li class="sns-item">
         <a
-          href="https://discord.gg/hhNTytM"
+          href="https://discord.gg/YHVsB9S"
           target="_blank">
-          <img 
-            src="" 
-            alt="Discord">
+          <i class="fab fa-discord"/>
         </a>
       </li>
     </ul>
@@ -34,5 +30,9 @@
   right: 0;
   transform: translateY(-50%);
   z-index: 10;
+}
+
+.fab {
+  font-size: 40px;
 }
 </style>
