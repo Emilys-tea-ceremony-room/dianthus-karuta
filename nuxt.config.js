@@ -1,3 +1,9 @@
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/dianthus-karuta/'
+  }
+} : {};
+
 module.exports = {
   /*
   ** Headers of the page
@@ -20,6 +26,7 @@ module.exports = {
     '@fortawesome/fontawesome-free-webfonts/css/fa-regular.css',
     '@fortawesome/fontawesome-free-webfonts/css/fa-solid.css'
   ],
+  ...routerBase,
   /*
   ** Customize the progress bar color
   */
