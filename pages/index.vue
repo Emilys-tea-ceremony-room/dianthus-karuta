@@ -1,12 +1,12 @@
 <template>
-  <section class="container">
+  <div class="container">
     <div class="background-wrapper">
       <div class="background-image"/>
     </div>
     <div>
       <app-logo/>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -21,17 +21,23 @@ export default {
 
 <style>
 .container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background: #467837;
 }
 
 .background-wrapper {
-  position: fixed;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
   z-index: -10;
 }
 
