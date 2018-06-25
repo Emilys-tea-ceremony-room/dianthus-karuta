@@ -27,12 +27,14 @@
   align-items: center;
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 20px;
   transform: translateY(-50%);
   z-index: 10;
 }
 
-.fab {
+.sns-item {
+  margin: 5px;
   font-size: 40px;
+  color: #554171;
 }
 </style>
