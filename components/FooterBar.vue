@@ -16,9 +16,10 @@ export default {
 
 <style>
 .footer-bar {
-  bottom: 0;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
   height: 80px;
-  width: 100%;
   position: fixed;
   z-index: 5;
 }

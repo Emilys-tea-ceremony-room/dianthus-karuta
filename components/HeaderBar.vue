@@ -1,33 +1,54 @@
 <template>
   <header class="header-bar">
-    <h1 class="logo-title"><a href="/">なでしこかるた</a></h1>
+    <div class="header-background">
+      <div class="header-container">
+        <h1 class="logo-title"><nuxt-link to="/">なでしこかるた(仮)</nuxt-link></h1>
+        <site-menu/>
+      </div>
+    </div>
   </header>
 </template>
 
 <script>
-import SnsBox from '~/components/SnsBox.vue'
+import SiteMenu from '~/components/SiteMenu.vue'
 
 export default {
   components: {
-    SnsBox
+    SiteMenu
   }
 }
 </script>
 
 <style>
+@import url(https://fonts.googleapis.com/earlyaccess/hannari.css);
+
 .header-bar {
-  top: 0;
-  height: 80px;
-  width: 100%;
+  top: 15px;
+  right: 15px;
+  left: 15px;
   position: fixed;
   z-index: 5;
 }
 
+.header-background {
+  padding: 60px 0 20px;
+}
+
+.header-container {
+  width: 90%;
+  position: relative;
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
 .logo-title {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(0%, -50%);
-  z-index: 10;
+  width: 380px;
+  background: rgba(248, 248, 206, 0.4);
+  padding: 30px 40px;
+  float: left;
+  font-family: 'Hannari';
 }
 </style>
