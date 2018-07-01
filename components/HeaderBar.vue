@@ -1,12 +1,17 @@
 <template>
-  <header class="header-bar">
-    <div class="header-background">
-      <div class="header-container">
-        <h1 class="logo-title"><nuxt-link to="/">なでしこかるた(仮)</nuxt-link></h1>
-        <site-menu/>
+  <div class="header-container">
+    <header>
+      <div class="logo-container">
+        <nuxt-link to="/">
+          <h1 class="logo-title">
+            なでしこかるた
+            <span class="en">Nadeshiko Karuta</span>
+          </h1>
+        </nuxt-link>
       </div>
-    </div>
-  </header>
+      <site-menu class="site-menu"/>
+    </header>
+  </div>
 </template>
 
 <script>
@@ -19,36 +24,51 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @import url(https://fonts.googleapis.com/earlyaccess/hannari.css);
 
-.header-bar {
-  top: 15px;
-  right: 15px;
-  left: 15px;
-  position: fixed;
-  z-index: 5;
-}
-
-.header-background {
-  padding: 60px 0 20px;
-}
-
 .header-container {
-  width: 90%;
-  position: relative;
-  overflow: hidden;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.logo-container {
+  position: absolute;
+  background: rgba(248, 248, 206, 0.4);
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  width: 380px;
+  height: 100%;
+}
+
+.logo-container a {
+  text-decoration: none;
 }
 
 .logo-title {
-  width: 380px;
-  background: rgba(248, 248, 206, 0.4);
-  padding: 30px 40px;
-  float: left;
+  display: block;
+  color: #161616;
+  font-size: 50px;
   font-family: 'Hannari';
+  writing-mode: vertical-rl;
+}
+
+.logo-title .en {
+  display: block;
+  font-size: 20px;
+}
+
+.en {
+  letter-spacing: 0;
+}
+
+.site-menu {
+  position: absolute;
+  right: 0;
 }
 </style>

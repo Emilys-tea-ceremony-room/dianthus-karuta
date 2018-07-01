@@ -3,42 +3,28 @@
     <div class="background-wrapper">
       <div class="background-image"/>
     </div>
-    <div>
-      <app-logo/>
-    </div>
-  </div>
-</template>
+    <div />
+</div></template>
 
-<script>
-import AppLogo from '~/components/AppLogo.vue'
-
-export default {
-  components: {
-    AppLogo
-  }
-}
-</script>
-
-<style>
+<style scoped>
 .container {
 }
 
 .background-wrapper {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
   z-index: -10;
 }
 
 .background-image {
-  position: absolute;
+  height: 100%;
+  width: 100%;
   z-index: -1;
   background: url(~/assets/tearoom.jpg) no-repeat center;
   background-size: cover;
-  height: 100%;
-  width: 100%;
 }
 
 .title {

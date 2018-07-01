@@ -2,9 +2,9 @@
   <div class="menu">
     <nav>
       <ul class="menu-list">
-        <li 
-          v-for="item in items" 
-          :key="item.name" 
+        <li
+          v-for="item in items"
+          :key="item.name"
           class="menu-item">
           <nuxt-link :to="item.link">
             <span>
@@ -12,6 +12,18 @@
               <span class="en">{{ item.nameEn }}</span>
             </span>
           </nuxt-link>
+        </li>
+        <li class="menu-item">
+          <a
+            href="https://twitter.com/emily_discord/"
+            target="_blank">
+            <i class="fab fa-twitter-square"/>
+          </a>
+          <a
+            href="https://discord.gg/yhvsb9s"
+            target="_blank">
+            <i class="fab fa-discord"/>
+          </a>
         </li>
       </ul>
     </nav>
@@ -29,7 +41,7 @@ export default {
           nameEn: "News"
         },
         {
-          link: "/",
+          link: "/profile",
           name: "人物紹介",
           nameEn: "Profile"
         },
@@ -56,8 +68,7 @@ export default {
 
 <style>
 .menu {
-  width: calc(100% - 380px);
-  float: right;
+  display: flex;
 }
 
 .menu-list {
@@ -83,9 +94,7 @@ export default {
   padding: 20px 30px;
   display: inline;
   white-space: nowrap;
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
 }
 
 .menu-item a > span {

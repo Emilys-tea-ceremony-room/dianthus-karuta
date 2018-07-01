@@ -1,8 +1,12 @@
 <template>
-  <div class="frame">
-    <header-bar/>
-    <nuxt/>
-    <footer-bar/>
+  <div class="page-container">
+    <div class="contents">
+      <nuxt/>
+      <footer-bar class="footer-bar"/>
+    </div>
+    <div class="frame">
+      <header-bar class="header-bar"/>
+    </div>
   </div>
 </template>
 
@@ -18,32 +22,40 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .frame {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  min-width: 320px;
   height: 100%;
-  min-height: 100vh;
+  min-height: 480px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #467837;
+  border: 15px solid #467837;
 }
 
-html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+.page-container {
+  width: 100%;
+  height: 100%;
 }
 
-*, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
+.contents {
+  margin: 15px;
+  background: #b4d2a6;
+  z-index: -5;
+}
+
+.header-bar {
+  position: fixed;
+  z-index: 5;
+}
+
+.footer-bar {
+  z-index: 5;
+  display: none;
 }
 </style>

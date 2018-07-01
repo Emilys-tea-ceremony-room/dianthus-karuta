@@ -1,26 +1,46 @@
 <template>
-  <div class="footer-bar">
-    <sns-box/>
-  </div>
+  <footer class="footer-bar">
+    <div class="footer-background">
+      <div class="footer-container">
+        <h6 class="copyright">
+          <i class="far fa-copyright"/>2018 Emily Tea Ceremony Room
+        </h6>
+        <share-box/>
+      </div>
+    </div>
+  </footer>
 </template>
 
 <script>
-import SnsBox from '~/components/SnsBox.vue'
+import ShareBox from '~/components/ShareBox.vue'
 
 export default {
   components: {
-    SnsBox
+    ShareBox
   }
 }
 </script>
 
-<style>
+<style scoped>
 .footer-bar {
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
-  height: 80px;
-  position: fixed;
-  z-index: 5;
+}
+
+.footer-background {
+  padding: 60px 0 20px;
+}
+
+.footer-container {
+  position: relative;
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 0;
+  left: 3em;
 }
 </style>

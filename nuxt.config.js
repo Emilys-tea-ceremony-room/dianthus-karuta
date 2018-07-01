@@ -20,6 +20,7 @@ module.exports = {
     ]
   },
   css: [
+    'normalize.css',
     '~/static/css/main.css',
     '@fortawesome/fontawesome-free-webfonts',
     '@fortawesome/fontawesome-free-webfonts/css/fa-brands.css',
