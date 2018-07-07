@@ -17,12 +17,16 @@
           <a
             href="https://twitter.com/emily_discord/"
             target="_blank">
-            <i class="fab fa-twitter-square"/>
+            <span>
+              <i class="fab fa-twitter-square"/>
+            </span>
           </a>
           <a
             href="https://discord.gg/yhvsb9s"
             target="_blank">
-            <i class="fab fa-discord"/>
+            <span>
+              <i class="fab fa-discord"/>
+            </span>
           </a>
         </li>
       </ul>
@@ -100,6 +104,7 @@ export default {
 .menu-item a > span {
   display: block;
   position: relative;
+  text-shadow: 0px 0px 8px #fff;
 }
 
 .menu-item a span.en {

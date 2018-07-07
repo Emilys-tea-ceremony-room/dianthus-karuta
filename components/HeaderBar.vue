@@ -69,6 +69,7 @@ export default {
 
 .site-menu {
   position: absolute;
+  padding: 60px 40px;
   right: 0;
 }
 </style>
