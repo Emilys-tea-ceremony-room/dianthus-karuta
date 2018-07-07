@@ -2,8 +2,8 @@
   <div class="container">
     <div class="background-wrapper">
       <div class="background-image"/>
+      <sakura/>
     </div>
-    <sakura/>
     <!--
     <div class="emily">
       <img src="~/assets/home_emily.png">
