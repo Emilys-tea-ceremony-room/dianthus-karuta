@@ -36,7 +36,7 @@ export default {
 
 .logo-container {
   position: absolute;
-  background: rgba(248, 248, 206, 0.4);
+  background: rgba(252, 252, 246, 0.95);
   text-align: left;
   display: flex;
   justify-content: center;

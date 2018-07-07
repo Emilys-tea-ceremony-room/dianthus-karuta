@@ -3,8 +3,24 @@
     <div class="background-wrapper">
       <div class="background-image"/>
     </div>
-    <div />
-</div></template>
+    <sakura/>
+    <!--
+    <div class="emily">
+      <img src="~/assets/home_emily.png">
+    </div>
+    -->
+  </div>
+</template>
+
+<script>
+import Sakura from '~/components/Sakura.vue'
+
+export default {
+  components: {
+    Sakura
+  }
+}
+</script>
 
 <style scoped>
 .container {
@@ -27,12 +43,10 @@
   background-size: cover;
 }
 
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 40px;
-  color: #35495e;
-  letter-spacing: 1px;
+.emily {
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  object-fit: contain;
 }
 </style>
