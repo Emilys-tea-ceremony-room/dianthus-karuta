@@ -13,7 +13,7 @@
             </span>
           </nuxt-link>
         </li>
-        <li class="menu-item">
+        <li class="menu-item link-container">
           <a
             href="https://twitter.com/emily_discord/"
             target="_blank">
@@ -22,7 +22,7 @@
             </span>
           </a>
           <a
-            href="https://discord.gg/yhvsb9s"
+            href="https://discord.gg/YHVsB9S"
             target="_blank">
             <span>
               <i class="fab fa-discord"/>
@@ -114,5 +114,9 @@ export default {
 
 .en {
     letter-spacing: 0;
+}
+
+.link-container {
+  display: none;
 }
 </style>
