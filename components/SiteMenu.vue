@@ -94,7 +94,7 @@ export default {
   text-align: left;
   color: #161616;
   text-decoration: none;
-  line-height: 110%;
+  line-height: 90%;
   padding: 20px 30px;
   display: inline;
   white-space: nowrap;
@@ -104,7 +104,7 @@ export default {
 .menu-item a > span {
   display: block;
   position: relative;
-  text-shadow: 0px 0px 8px #fff;
+  text-shadow: 0px 0px 4px #fff;
 }
 
 .menu-item a span.en {
