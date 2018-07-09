@@ -136,11 +136,22 @@ export default {
 
 .navbar-burger {
   cursor: pointer;
-  display: block;
   height: 3.25rem;
   position: relative;
   width: 3.25rem;
   margin-left: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-burger {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .navbar-burger {
+    display: none;
+  }
 }
 
 .navbar-burger span {
@@ -185,9 +196,20 @@ export default {
 }
 
 .navbar-menu {
-  display: none;
   box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
   padding: 0.5rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .navbar-menu {
+    display: block;
+  }
 }
 
 .navbar-menu.is-active {
