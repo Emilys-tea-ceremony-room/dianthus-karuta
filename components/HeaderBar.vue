@@ -65,7 +65,8 @@ export default {
   justify-content: space-around;
   align-items: center;
   white-space: nowrap;
-  width: 380px;
+  width: 30%;
+  max-width: 380px;
   height: 100%;
 }
 
@@ -76,14 +77,36 @@ export default {
 .logo-title {
   display: block;
   color: #161616;
-  font-size: 50px;
   font-family: 'Hannari';
   writing-mode: vertical-rl;
 }
 
+@media screen and (max-width: 768px) {
+  .logo-title {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .logo-title {
+    font-size: 50px;
+  }
+}
+
 .logo-title .en {
   display: block;
-  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .logo-title .en {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .logo-title .en {
+    font-size: 20px;
+  }
 }
 
 .en {
@@ -96,6 +119,18 @@ export default {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 768px) {
+  .link-container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .link-container {
+    flex-direction: row;
+  }
+}
+
 .link-container a {
   margin: 0 30px;
   display: flex;
@@ -104,7 +139,7 @@ export default {
 }
 
 .link-icon {
-  margin: 8px 0;
+  margin: 4px 0 -2px;
   font-size: 120%;
 }
 

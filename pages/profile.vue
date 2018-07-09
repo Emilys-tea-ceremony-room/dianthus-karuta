@@ -7,6 +7,14 @@
   </div>
 </template>
 
+<script>
+export default {
+  fetch ({store}) {
+    return store.commit('siteMenu/reset')
+  }
+}
+</script>
+
 <style scoped>
 .container {
 }

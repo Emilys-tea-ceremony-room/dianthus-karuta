@@ -18,6 +18,9 @@ import Sakura from '~/components/Sakura.vue'
 export default {
   components: {
     Sakura
+  },
+  fetch ({store}) {
+    return store.commit('siteMenu/reset')
   }
 }
 </script>
