@@ -3,10 +3,8 @@
     <header>
       <div class="logo-container">
         <nuxt-link to="/">
-          <h1 class="logo-title">
-            なでしこかるた
-            <span class="en">Nadeshiko Karuta</span>
-          </h1>
+          <div class="logo-title"/>
+          <div class="logo-title-en"/>
         </nuxt-link>
         <div class="link-container">
           <a
@@ -47,8 +45,6 @@ export default {
 </script>
 
 <style scoped>
-@import url(https://fonts.googleapis.com/earlyaccess/hannari.css);
-
 .header-container {
   position: absolute;
   height: 100%;
@@ -77,8 +73,7 @@ export default {
 .logo-title {
   display: block;
   color: #161616;
-  font-family: 'Hannari';
-  writing-mode: vertical-rl;
+  background: url('~/assets/logo-text.svg');
 }
 
 @media screen and (max-width: 768px) {
@@ -93,19 +88,18 @@ export default {
   }
 }
 
-.logo-title .en {
+.logo-title-en {
   display: block;
+  background: url('~/assets/logo-text-en.svg');
 }
 
 @media screen and (max-width: 768px) {
   .logo-title .en {
-    font-size: 16px;
   }
 }
 
 @media screen and (min-width: 769px) {
   .logo-title .en {
-    font-size: 20px;
   }
 }
 
@@ -149,7 +143,19 @@ export default {
 
 .site-menu {
   position: absolute;
-  padding: 60px 40px;
   right: 0;
 }
+
+@media screen and (max-width: 768px) {
+  .site-menu {
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .site-menu {
+    padding: 60px 40px;
+  }
+}
+
 </style>

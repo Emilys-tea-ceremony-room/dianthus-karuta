@@ -95,6 +95,18 @@ export default {
   align-items: stretch;
 }
 
+@media screen and (max-width: 768px) {
+  .menu-list {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .menu-list {
+    flex-direction: row;
+  }
+}
+
 .menu-item {
   letter-spacing: 0;
   font-size: 20px;
@@ -112,7 +124,18 @@ export default {
   padding: 20px 30px;
   display: inline;
   white-space: nowrap;
-  writing-mode: vertical-rl;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-item a {
+    writing-mode: rl;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .menu-item a {
+    writing-mode: vertical-rl;
+  }
 }
 
 .menu-item a > span {
@@ -136,17 +159,28 @@ export default {
 
 .navbar-burger {
   cursor: pointer;
-  display: block;
   height: 3.25rem;
   position: relative;
   width: 3.25rem;
   margin-left: auto;
 }
 
+@media screen and (max-width: 768px) {
+  .navbar-burger {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .navbar-burger {
+    display: none;
+  }
+}
+
 .navbar-burger span {
   background-color: currentColor;
   display: block;
-  height: 1px;
+  height: 2px;
   left: calc(50% - 8px);
   position: absolute;
   transform-origin: center;
@@ -185,9 +219,20 @@ export default {
 }
 
 .navbar-menu {
-  display: none;
   box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
   padding: 0.5rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .navbar-menu {
+    display: block;
+  }
 }
 
 .navbar-menu.is-active {
