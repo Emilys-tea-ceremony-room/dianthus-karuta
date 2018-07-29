@@ -77,7 +77,7 @@ export default {
 
 .logo-container {
   position: absolute;
-  background: rgba(252, 252, 246, 0.95);
+  background: rgba(252, 252, 246, 0.85);
   text-align: left;
   display: flex;
   flex-direction: row;
