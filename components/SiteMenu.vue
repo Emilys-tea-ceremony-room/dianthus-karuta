@@ -231,6 +231,7 @@ export default {
 }
 
 .navbar-menu {
+  box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
   padding: 0.5rem 0;
 }
 
