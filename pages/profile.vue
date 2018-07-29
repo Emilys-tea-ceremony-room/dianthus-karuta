@@ -10,7 +10,9 @@
 <script>
 export default {
   fetch ({store}) {
-    return store.commit('siteMenu/reset')
+    store.commit('title/reset')
+    store.commit('siteMenu/reset')
+    return
   }
 }
 </script>

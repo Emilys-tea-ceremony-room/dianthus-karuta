@@ -2,7 +2,10 @@
   <div class="menu">
     <nav>
       <div 
-        :class="{'is-active': $store.state.siteMenu.isMenuActive}" 
+        :class="{
+          'is-active': $store.state.siteMenu.isMenuActive, 
+          'is-title': $store.state.title.isTitle
+        }" 
         class="navbar-burger" 
         data-target="navMenu" 
         @click="$store.commit('siteMenu/toggle')">
@@ -12,14 +15,21 @@
       </div>
       <div 
         id="navMenu" 
-        :class="{'is-active': $store.state.siteMenu.isMenuActive}" 
+        :class="{
+          'is-active': $store.state.siteMenu.isMenuActive, 
+          'is-title': $store.state.title.isTitle
+        }" 
         class="navbar-menu">
         <ul class="menu-list">
           <li
             v-for="item in items"
             :key="item.name"
             class="menu-item">
-            <nuxt-link :to="item.link">
+            <nuxt-link 
+              :to="item.link"
+              :class="{
+                'is-title': $store.state.title.isTitle
+            }">
               <span>
                 {{ item.name }}
                 <span class="en">{{ item.nameEn }}</span>
@@ -116,7 +126,6 @@ export default {
 
 .menu-item a {
   position: relative;
-  font-size: 120%;
   text-align: left;
   color: #161616;
   text-decoration: none;
@@ -124,6 +133,7 @@ export default {
   padding: 20px 30px;
   display: inline;
   white-space: nowrap;
+  font-size: 90%;
 }
 
 @media screen and (max-width: 768px) {
@@ -133,7 +143,8 @@ export default {
 }
 
 @media screen and (min-width: 769px) {
-  .menu-item a {
+  .menu-item a.is-title {
+    font-size: 120%;
     writing-mode: vertical-rl;
   }
 }
@@ -141,7 +152,7 @@ export default {
 .menu-item a > span {
   display: block;
   position: relative;
-  text-shadow: 0px 0px 4px #fff;
+  text-shadow: 0px 0px 8px #fff;
 }
 
 .menu-item a span.en {
@@ -188,6 +199,7 @@ export default {
   transition-property: background-color, opacity, transform;
   transition-timing-function: ease-out;
   width: 16px;
+  box-shadow: 0 0 16px 0 #fff;
 }
 
 .navbar-burger span:nth-child(1) {
@@ -203,7 +215,7 @@ export default {
 }
 
 .navbar-burger:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 .navbar-burger.is-active span:nth-child(1) {
@@ -219,7 +231,6 @@ export default {
 }
 
 .navbar-menu {
-  box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
   padding: 0.5rem 0;
 }
 

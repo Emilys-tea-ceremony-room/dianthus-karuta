@@ -20,7 +20,9 @@ export default {
     Sakura
   },
   fetch ({store}) {
-    return store.commit('siteMenu/reset')
+    store.commit('siteMenu/reset')
+    store.commit('title/set')
+    return
   }
 }
 </script>

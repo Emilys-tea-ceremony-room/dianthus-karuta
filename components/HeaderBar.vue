@@ -1,10 +1,24 @@
 <template>
-  <div class="header-container">
+  <div 
+    :class="{
+      'is-title': $store.state.title.isTitle
+    }"
+    class="header-container">
     <header>
-      <div class="logo-container">
-        <nuxt-link to="/">
-          <div class="logo-title"/>
-          <div class="logo-title-en"/>
+      <div
+        :class="{
+          'is-title': $store.state.title.isTitle
+        }" 
+        class="logo-container">
+        <nuxt-link 
+          to="/" 
+          class="logo-title">
+          <img 
+            class="logo-title-ja" 
+            src="~/assets/emily_logo-text-ja.svg">
+          <img
+            class="logo-mark"
+            src="~/assets/emily_logo.svg">
         </nuxt-link>
         <div class="link-container">
           <a
@@ -29,7 +43,11 @@
           </a>
         </div>
       </div>
-      <site-menu class="site-menu"/>
+      <site-menu 
+        :class="{
+          'is-title': $store.state.title.isTitle
+        }" 
+        class="site-menu"/>
     </header>
   </div>
 </template>
@@ -47,9 +65,14 @@ export default {
 <style scoped>
 .header-container {
   position: absolute;
-  height: 100%;
+  top: 0;
   width: 100%;
+  height: 80px;
   display: flex;
+}
+
+.header-container.is-title {
+  height: 100%;
 }
 
 .logo-container {
@@ -57,13 +80,27 @@ export default {
   background: rgba(252, 252, 246, 0.95);
   text-align: left;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   white-space: nowrap;
-  width: 30%;
   max-width: 380px;
+  width: 30%;
   height: 100%;
+}
+
+.logo-container.is-title {
+  flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .logo-container {
+    width: 70%;
+  }
+
+  .logo-container.is-title {
+    width: 30%;
+  }
 }
 
 .logo-container a {
@@ -71,35 +108,30 @@ export default {
 }
 
 .logo-title {
-  display: block;
-  color: #161616;
-  background: url('~/assets/logo-text.svg');
 }
 
 @media screen and (max-width: 768px) {
   .logo-title {
-    font-size: 40px;
   }
 }
 
 @media screen and (min-width: 769px) {
   .logo-title {
-    font-size: 50px;
   }
 }
 
-.logo-title-en {
+.logo-title-ja {
   display: block;
-  background: url('~/assets/logo-text-en.svg');
+  height: 60vh;
 }
 
 @media screen and (max-width: 768px) {
-  .logo-title .en {
+  .logo-title-ja {
   }
 }
 
 @media screen and (min-width: 769px) {
-  .logo-title .en {
+  .logo-title-ja {
   }
 }
 
@@ -107,10 +139,20 @@ export default {
   letter-spacing: 0;
 }
 
+.logo-mark {
+  width: 40px;
+  display: block;
+  margin: auto;
+}
+
 .link-container {
-  font-size: 30px;
+  font-size: 20px;
   display: flex;
   justify-content: space-between;
+}
+
+.is-title .link-container {
+  font-size: 30px;
 }
 
 @media screen and (max-width: 768px) {
@@ -126,10 +168,14 @@ export default {
 }
 
 .link-container a {
-  margin: 0 30px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   color: #686868;
+}
+
+.is-title .link-container a {
+  margin: 10px 30px;
 }
 
 .link-icon {
@@ -148,14 +194,17 @@ export default {
 
 @media screen and (max-width: 768px) {
   .site-menu {
-    padding: 10px 20px;
+    padding: 5px 10px;
   }
 }
 
 @media screen and (min-width: 769px) {
   .site-menu {
-    padding: 60px 40px;
+    padding: 5px 40px;
+  }
+
+  .site-menu.is-title {
+    padding: 40px;
   }
 }
-
 </style>
