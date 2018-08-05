@@ -16,6 +16,9 @@
           <img 
             class="logo-title-ja" 
             src="~/assets/emily_logo-text-ja.svg">
+          <img 
+            class="logo-title-ja-h"
+            src="~/assets/emily_logo-text-ja-h.svg">
           <img
             class="logo-mark"
             src="~/assets/emily_logo.svg">
@@ -108,6 +111,12 @@ export default {
 }
 
 .logo-title {
+  display: flex;
+  flex-direction: row;
+}
+
+.is-title .logo-title {
+  flex-direction: column;
 }
 
 @media screen and (max-width: 768px) {
@@ -121,8 +130,21 @@ export default {
 }
 
 .logo-title-ja {
-  display: block;
+  display: none;
   height: 60vh;
+}
+
+.is-title .logo-title-ja {
+  display: block;
+}
+
+.logo-title-ja-h {
+  display: block;
+  width: 20vw;
+}
+
+.is-title .logo-title-ja-h {
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -149,6 +171,7 @@ export default {
   font-size: 20px;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 .is-title .link-container {
@@ -157,12 +180,16 @@ export default {
 
 @media screen and (max-width: 768px) {
   .link-container {
+    flex-direction: row;
+  }
+
+  .is-title .link-container {
     flex-direction: column;
   }
 }
 
 @media screen and (min-width: 769px) {
-  .link-container {
+  .is-title .link-container {
     flex-direction: row;
   }
 }
