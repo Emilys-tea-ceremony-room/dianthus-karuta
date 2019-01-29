@@ -63,7 +63,7 @@ export default {
   data () {
     return {
       items: [
-        {
+        /*{
           link: "/",
           name: "新着情報",
           nameEn: "News"
@@ -82,12 +82,17 @@ export default {
           link: "/",
           name: "作品目録",
           nameEn: "Discography"
-        },
-        {
+        },*/
+        /*{
+          link: "/",
+          name: "撫子歌留多",
+          nameEn: "Nadeshiko Karuta"
+        },*/
+        /*{
           link: "/",
           name: "電子案内",
           nameEn: "Links"
-        }
+        }*/
       ]
     }
   }

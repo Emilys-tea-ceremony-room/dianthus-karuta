@@ -70,7 +70,7 @@ export default {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 80px;
+  height: 12vh;
   display: flex;
 }
 
@@ -165,6 +165,17 @@ export default {
   width: 40px;
   display: block;
   margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .logo-mark {
+    width: 20px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .logo-mark {
+  }
 }
 
 .link-container {
