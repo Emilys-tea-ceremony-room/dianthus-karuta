@@ -2,7 +2,7 @@
   "name": "dk",
   "version": "1.0.0",
   "description": "Emily Stewart fansite.",
-  "author": "ArLE <ARLEQUIN.prx@gmail.com>",
+  "author": "Emily's tea ceremony room",
   "private": true,
   "scripts": {
     "dev": "nuxt",

@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "10.4.1"
+  - "v10.16.0"
 
 cache:
   directories:
@@ -22,6 +22,7 @@ deploy:
   skip-cleanup: true
   github-token: $GITHUB_ACCESS_TOKEN  # Set in travis-ci.org dashboard, marked secure https://docs.travis-ci.com/user/deployment/pages/#Setting-the-GitHub-token
   target-branch: gh-pages
+  fdqn: nadeshikokaruta.com
   local-dir: dist
   keep-history: true
   on:
