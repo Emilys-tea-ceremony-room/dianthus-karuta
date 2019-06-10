@@ -38,10 +38,9 @@ export default class HeaderBar extends Vue {}
   display flex
   margin 15px
   height 12vh
-
-.header-container.is-title
-  bottom 0
-  height auto
+  &.is-title
+    bottom 0
+    height auto
 
 .logo-container
   position absolute
@@ -50,23 +49,18 @@ export default class HeaderBar extends Vue {}
   justify-content space-around
   align-items center
   max-width 380px
-  width 30%
+  width 100%
+  +tablet()
+    width 30%
   height 100%
   background rgba(252, 252, 246, 0.85)
   text-align left
   white-space nowrap
-
-.logo-container.is-title
-  flex-direction column
-
-@media screen and (max-width: 768px)
-  .logo-container
-    width 100%
-  .logo-container.is-title
+  &.is-title
+    flex-direction column
     width 30%
-
-.logo-container a
-  text-decoration none
+  a
+    text-decoration none
 
 .logo-title
   display flex
@@ -95,31 +89,24 @@ export default class HeaderBar extends Vue {}
 .logo-mark
   display block
   margin auto
-  width 40px
-
-@media screen and (max-width: 768px)
-  .logo-mark
-    width 20px
+  width 20px
+  +tablet()
+    width 40px
 
 .link-container
-  display flex
-  flex-direction column
+  display none
+  flex-direction row
+  +tablet()
+    display flex
+    flex-direction column
   justify-content space-between
   font-size 20px
 
 .is-title .link-container
+  display flex
+  flex-direction column
   font-size 30px
-
-@media screen and (max-width: 768px)
-  .link-container
-    display none
-    flex-direction row
-  .is-title .link-container
-    display flex
-    flex-direction column
-
-@media screen and (min-width: 769px)
-  .is-title .link-container
+  +tablet()
     flex-direction row
 
 .link-container a
@@ -141,14 +128,9 @@ export default class HeaderBar extends Vue {}
 .site-menu
   position absolute
   right 0
-
-@media screen and (max-width: 768px)
-  .site-menu
-    padding 5px 10px
-
-@media screen and (min-width: 769px)
-  .site-menu
+  padding 5px 10px
+  +tablet()
     padding 5px 40px
-  .site-menu.is-title
-    padding 40px
+    .is-title
+      padding 40px
 </style>

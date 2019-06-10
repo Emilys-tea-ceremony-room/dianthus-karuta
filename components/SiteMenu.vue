@@ -88,15 +88,10 @@ export default class SiteMenu extends Vue {
 
 .menu-list
   display flex
+  flex-direction column
   justify-content flex-end
   align-items stretch
-
-@media screen and (max-width: 768px)
-  .menu-list
-    flex-direction column
-
-@media screen and (min-width: 769px)
-  .menu-list
+  +tablet()
     flex-direction row
 
 .menu-item
@@ -104,31 +99,25 @@ export default class SiteMenu extends Vue {
   color #f8f8f8
   letter-spacing 0
   font-size 20px
-
-.menu-item a
-  position relative
-  display inline
-  padding 20px 30px
-  color #161616
-  text-align left
-  text-decoration none
-  white-space nowrap
-  font-size 90%
-  line-height 90%
-
-@media screen and (max-width: 768px)
-  .menu-item a
+  a
+    position relative
+    display inline
+    padding 20px 30px
+    color #161616
+    text-align left
+    text-decoration none
+    white-space nowrap
+    font-size 90%
+    line-height 90%
     writing-mode rl
-
-@media screen and (min-width: 769px)
-  .menu-item a.is-title
-    font-size 120%
-    writing-mode vertical-rl
+    +tablet()
+      font-size 120%
+      writing-mode vertical-rl
 
 .menu-item a > span
   position relative
   display block
-  text-shadow 0px 0px 8px #fff
+  text-shadow 0px 0px 6px #fff
 
 .menu-item a span.en
   display block
@@ -162,7 +151,7 @@ export default class SiteMenu extends Vue {
   width 16px
   height 2px
   background-color currentColor
-  box-shadow 0 0 16px 0 #fff
+  box-shadow 0 0 16px 1px #fff
   transition-timing-function ease-out
   transition-duration 86ms
   transition-property background-color, opacity, transform
@@ -190,15 +179,11 @@ export default class SiteMenu extends Vue {
   transform translateY(-5px) rotate(-45deg)
 
 .navbar-menu
+  display none
   padding 0.5rem 0
-  box-shadow 0 8px 16px rgba(10, 10, 10, 0.1)
-
-@media screen and (max-width: 768px)
-  .navbar-menu
-    display none
-
-@media screen and (min-width: 769px)
-  .navbar-menu
+  background-color rgba(216, 216, 216, 0.6)
+  box-shadow 0 0 16px rgba(10, 10, 10, 0.1)
+  +tablet()
     display block
 
 .navbar-menu.is-active
