@@ -1,23 +1,17 @@
-<template>
-  <div class="container">
-    <div class="background-wrapper">
-      <div class="background-image"/>
-    </div>
-    <div/>
-  </div>
+<template lang="pug">
+  .container
 </template>
 
-<script>
-export default {
-  fetch ({store}) {
-    store.commit('title/reset')
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+
+@Component
+export default class Profile extends Vue {
+  fetch({ store }) {
     store.commit('siteMenu/reset')
-    return
+    store.commit('title/reset')
   }
 }
 </script>
 
-<style scoped>
-.container {
-}
-</style>
+<style lang="stylus" scoped></style>

@@ -1,61 +1,55 @@
-<template>
-  <div class="page-container">
-    <div class="contents">
-      <nuxt/>
-      <footer-bar class="footer-bar"/>
-    </div>
-    <div class="frame">
-      <header-bar class="header-bar"/>
-    </div>
-  </div>
+<template lang="pug">
+  .page-container
+    .contents
+      nuxt
+      footer-bar.footer-bar
+    .frame
+      header-bar.header-bar
 </template>
 
-<script>
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
 import HeaderBar from '~/components/HeaderBar.vue'
 import FooterBar from '~/components/FooterBar.vue'
 
-export default {
+@Component({
   components: {
     HeaderBar,
     FooterBar
   }
-}
+})
+export default class Default extends Vue {}
 </script>
 
-<style scoped>
-.frame {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-width: 320px;
-  height: 100%;
-  min-height: 480px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border: 15px solid #467837;
-}
+<style lang="stylus" scoped>
+.frame
+  position fixed
+  top 0
+  left 0
+  display flex
+  justify-content center
+  align-items center
+  min-width 320px
+  min-height 480px
+  width 100%
+  height 100%
+  border 15px solid #467837
+  text-align center
 
-.page-container {
-  width: 100%;
-  height: 100%;
-}
+.page-container
+  width 100%
+  height 100%
 
-.contents {
-  margin: 15px;
-  background: #b4d2a6;
-  z-index: -5;
-}
+.contents
+  z-index -5
+  margin 15px
+  background #b4d2a6
 
-.header-bar {
-  position: fixed;
-  z-index: 5;
-}
+.header-bar
+  position fixed
+  z-index 5
 
-.footer-bar {
-  z-index: 5;
-  display: none;
-}
+.footer-bar
+  z-index 5
+  display none
 </style>

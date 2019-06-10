@@ -5,16 +5,18 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: '@typescript-eslint/parser'
   },
   extends: [
-    // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
-    'plugin:vue/recommended'
+    '@nuxtjs',
+    'plugin:nuxt/recommended',
+    'plugin:prettier/recommended',
+    'prettier',
+    'prettier/vue'
   ],
-  // required to lint *.vue files
-  plugins: [
-    'vue'
-  ],
+  plugins: ['@typescript-eslint', 'prettier'],
   // add your custom rules here
-  rules: {}
+  rules: {
+    '@typescript-eslint/no-unused-vars': 'error'
+  }
 }

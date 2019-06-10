@@ -1,57 +1,48 @@
-<template>
-  <div class="container">
-    <div class="background-wrapper">
-      <div class="background-image"/>
-      <sakura/>
-    </div>
-    <!--
-    <div class="emily">
-      <img src="~/assets/home_emily.png">
-    </div>
-    -->
-  </div>
+<template lang="pug">
+  .container
+    .background-wrapper
+      .background-image
+      sakura
+    //- div.emily
+    //-   img(src="~/assets/home_emily.png")
 </template>
 
-<script>
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
 import Sakura from '~/components/Sakura.vue'
 
-export default {
+@Component({
   components: {
     Sakura
-  },
-  fetch ({store}) {
+  }
+})
+export default class Index extends Vue {
+  fetch({ store }) {
     store.commit('siteMenu/reset')
     store.commit('title/set')
-    return
   }
 }
 </script>
 
-<style scoped>
-.container {
-}
+<style lang="stylus" scoped>
+.background-wrapper
+  position fixed
+  top 0
+  left 0
+  z-index -10
+  width 100%
+  height 100%
 
-.background-wrapper {
-  top: 0;
-  left: 0;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  z-index: -10;
-}
+.background-image
+  z-index -1
+  width 100%
+  height 100%
+  background url('~assets/tearoom.jpg') no-repeat center
+  background-size cover
 
-.background-image {
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  background: url(~/assets/tearoom.jpg) no-repeat center;
-  background-size: cover;
-}
-
-.emily {
-  position: absolute;
-  right: 10%;
-  bottom: 0;
-  object-fit: contain;
-}
+.emily
+  position absolute
+  right 10%
+  bottom 0
+  object-fit contain
 </style>
