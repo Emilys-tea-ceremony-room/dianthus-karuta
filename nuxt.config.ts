@@ -25,7 +25,7 @@ const config: NuxtConfiguration = {
   /*
    ** Global CSS
    */
-  css: ['@/assets/stylus/main.styl'],
+  css: ['@/assets/stylus/ress.css', '@/assets/stylus/main.styl'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -37,7 +37,8 @@ const config: NuxtConfiguration = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/eslint-module',
-    'nuxt-fontawesome'
+    'nuxt-fontawesome',
+    '@nuxtjs/style-resources'
   ],
   /*
    ** Axios module configuration
@@ -68,6 +69,9 @@ const config: NuxtConfiguration = {
         icons: ['far']
       }
     ]
+  },
+  styleResources: {
+    stylus: ['@/assets/stylus/mixins.styl']
   }
 }
 
