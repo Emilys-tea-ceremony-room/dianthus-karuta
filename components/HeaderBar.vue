@@ -49,6 +49,7 @@ export default class HeaderBar extends Vue {}
 .logo-title
   display flex
   flex-direction row
+  align-items center
 
 .logo-title-ja-h
   display block
@@ -59,10 +60,7 @@ export default class HeaderBar extends Vue {}
 
 .logo-mark
   display block
-  margin auto
-  width 20px
-  +tablet()
-    width 40px
+  height 40px
 
 .link-container
   display none

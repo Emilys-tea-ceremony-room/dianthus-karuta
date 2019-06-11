@@ -34,7 +34,6 @@ export default class Default extends Vue {}
   left 0
   display flex
   flex-direction column
-  // display flex
   justify-content center
   align-items center
   min-width 320px
@@ -46,11 +45,9 @@ export default class Default extends Vue {}
   z-index 10
 
 .contents
+  display flex
   flex-grow 1
   width 100%
-  // margin 15px
-  // margin-top 95px
-  // height calc(100vh - 30px - 80px)
   background #b4d2a6
 
 .footer-bar
@@ -59,5 +56,4 @@ export default class Default extends Vue {}
   bottom 0
   left 0
   z-index 10
-  // display none
 </style>

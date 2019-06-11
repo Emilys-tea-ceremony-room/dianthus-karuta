@@ -35,7 +35,7 @@ export default class Profile extends Vue {
 
 <style lang="stylus" scoped>
 .profile-container
-  height 100%
+  width 100%
   border-top 30px
   background url('~assets/profile_bg.png') no-repeat center
   background-position top center
