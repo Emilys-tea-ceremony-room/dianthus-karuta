@@ -1,10 +1,9 @@
 <template lang="pug">
-  .container
-    .background-wrapper
-      .background-image
-      sakura
-    //- div.emily
-    //-   img(src="~/assets/home_emily.png")
+.container
+  //- .emily
+  //-   img(src="~/assets/home_emily.png")
+  sakura.sakura-container
+  .background-image
 </template>
 
 <script lang="ts">
@@ -17,6 +16,10 @@ import Sakura from '~/components/Sakura.vue'
   }
 })
 export default class Index extends Vue {
+  layout() {
+    return 'home'
+  }
+
   fetch({ store }) {
     store.commit('siteMenu/reset')
     store.commit('title/set')
@@ -25,16 +28,18 @@ export default class Index extends Vue {
 </script>
 
 <style lang="stylus" scoped>
-.background-wrapper
-  position fixed
-  top 0
-  left 0
-  z-index -10
-  width 100%
+.container
   height 100%
 
+.sakura-container
+  position absolute
+  top 0
+  right 0
+  bottom 0
+  left 0
+  overflow hidden
+
 .background-image
-  z-index -1
   width 100%
   height 100%
   background url('~assets/tearoom.jpg') no-repeat center

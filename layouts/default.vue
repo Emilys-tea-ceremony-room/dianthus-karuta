@@ -1,10 +1,10 @@
 <template lang="pug">
   .page-container
-    .contents
-      nuxt
-      footer-bar.footer-bar
     .frame
       header-bar.header-bar
+      .contents
+        nuxt
+      footer-bar.footer-bar
 </template>
 
 <script lang="ts">
@@ -22,34 +22,42 @@ export default class Default extends Vue {}
 </script>
 
 <style lang="stylus" scoped>
-.frame
-  position fixed
-  top 0
-  left 0
-  display flex
-  justify-content center
-  align-items center
-  min-width 320px
-  min-height 480px
-  width 100%
-  height 100%
-  border 15px solid #467837
-  text-align center
-
 .page-container
   width 100%
   height 100%
 
-.contents
-  z-index -5
-  margin 15px
-  background #b4d2a6
+.frame
+  position absolute
+  top 0
+  right 0
+  bottom 0
+  left 0
+  display flex
+  flex-direction column
+  // display flex
+  justify-content center
+  align-items center
+  min-width 320px
+  min-height 480px
+  border 15px solid #467837
+  text-align center
 
 .header-bar
-  position fixed
-  z-index 5
+  z-index 10
+
+.contents
+  flex-grow 1
+  width 100%
+  // margin 15px
+  // margin-top 95px
+  // height calc(100vh - 30px - 80px)
+  background #b4d2a6
 
 .footer-bar
-  z-index 5
-  display none
+  position absolute
+  right 0
+  bottom 0
+  left 0
+  z-index 10
+  // display none
 </style>

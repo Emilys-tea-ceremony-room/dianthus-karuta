@@ -1,8 +1,7 @@
 <template lang="pug">
-  header.header-container(:class="{'is-title': $store.state.title.isTitle}")
-    .logo-container(:class="{'is-title': $store.state.title.isTitle}")
+  header.header-container
+    .logo-container
       nuxt-link.logo-title(to="/")
-        img.logo-title-ja(src="~/assets/emily_logo-text-ja.svg")
         img.logo-title-ja-h(src="~/assets/emily_logo-text-ja-h.svg")
         img.logo-mark(src="~/assets/emily_logo.svg")
       .link-container
@@ -14,7 +13,7 @@
           span.link-icon
             font-awesome-icon(:icon="['fab', 'twitter-square']")
           span.link-text 呟き
-    site-menu(:class="{'is-title': $store.state.title.isTitle}").site-menu
+    site-menu.site-menu
 </template>
 
 <script lang="ts">
@@ -31,34 +30,19 @@ export default class HeaderBar extends Vue {}
 
 <style lang="stylus" scoped>
 .header-container
-  position absolute
-  top 0
-  right 0
-  left 0
   display flex
-  margin 15px
-  height 12vh
-  &.is-title
-    bottom 0
-    height auto
+  width 100%
+  height 80px
+  background rgba(252, 252, 246, 0.85)
 
 .logo-container
-  position absolute
   display flex
   flex-direction row
   justify-content space-around
   align-items center
-  max-width 380px
-  width 100%
-  +tablet()
-    width 30%
-  height 100%
-  background rgba(252, 252, 246, 0.85)
+  margin-left 40px
   text-align left
   white-space nowrap
-  &.is-title
-    flex-direction column
-    width 30%
   a
     text-decoration none
 
@@ -66,22 +50,9 @@ export default class HeaderBar extends Vue {}
   display flex
   flex-direction row
 
-.is-title .logo-title
-  flex-direction column
-
-.logo-title-ja
-  display none
-  height 60vh
-
-.is-title .logo-title-ja
-  display block
-
 .logo-title-ja-h
   display block
-  width 20vw
-
-.is-title .logo-title-ja-h
-  display none
+  height 72px
 
 .en
   letter-spacing 0
@@ -98,25 +69,14 @@ export default class HeaderBar extends Vue {}
   flex-direction row
   +tablet()
     display flex
-    flex-direction column
   justify-content space-between
   font-size 20px
-
-.is-title .link-container
-  display flex
-  flex-direction column
-  font-size 30px
-  +tablet()
-    flex-direction row
 
 .link-container a
   display flex
   flex-direction column
   margin 10px
   color #686868
-
-.is-title .link-container a
-  margin 10px 30px
 
 .link-icon
   margin 4px 0 -2px
@@ -128,9 +88,6 @@ export default class HeaderBar extends Vue {}
 .site-menu
   position absolute
   right 0
-  padding 5px 10px
   +tablet()
-    padding 5px 40px
-    .is-title
-      padding 40px
+    padding 40px 60px
 </style>

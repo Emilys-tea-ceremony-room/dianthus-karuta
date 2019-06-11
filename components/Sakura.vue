@@ -36,121 +36,113 @@ export default class Sakura extends Vue {}
 
 #sakura1
   z-index 0
-  animation sakura01 12s ease-out 2s infinite normal, sakura11 2.2s ease-in-out 0s infinite alternate, sakura21 3.5s ease 0s infinite alternate
+  animation sakura00 0s step-end 2s backwards, sakura01 12s ease-out 2s infinite normal, sakura11 2.2s ease-in-out 0s infinite alternate, sakura21 3.5s ease 0s infinite alternate
 
 #sakura2
   z-index 10
-  animation sakura02 11s ease-out 3s infinite normal, sakura11 2.5s ease-in-out 0s infinite alternate, sakura22 4.4s ease 0s infinite alternate
+  animation sakura00 0s step-end 3s backwards, sakura02 11s ease-out 3s infinite normal, sakura11 2.5s ease-in-out 0s infinite alternate, sakura22 4.4s ease 0s infinite alternate
 
 #sakura3
   z-index 5
-  animation sakura03 13s ease-out 1s infinite normal, sakura12 2s ease-in-out 0s infinite alternate, sakura23 2.6s ease 0s infinite alternate
+  animation sakura00 0s step-end 1s backwards, sakura03 13s ease-out 1s infinite normal, sakura12 2s ease-in-out 0s infinite alternate, sakura23 2.6s ease 0s infinite alternate
 
 #sakura4
   z-index 0
-  animation sakura04 12s ease-out 0s infinite normal, sakura11 2.4s ease-in-out 0s infinite alternate, sakura21 4.2s ease 0s infinite alternate
+  animation sakura00 0s step-end 0s backwards, sakura04 12s ease-out 0s infinite normal, sakura11 2.4s ease-in-out 0s infinite alternate, sakura21 4.2s ease 0s infinite alternate
 
 #sakura5
   z-index 10
-  animation sakura05 11s ease-out 1.5s infinite normal, sakura12 3s ease-in-out 0s infinite alternate, sakura22 2.8s ease 0s infinite alternate
+  animation sakura00 0s step-end 1.5s backwards, sakura05 11s ease-out 1.5s infinite normal, sakura12 3s ease-in-out 0s infinite alternate, sakura22 2.8s ease 0s infinite alternate
 
 #sakura6
   z-index 2
-  animation sakura06 30s ease-out 2.3s infinite normal, sakura12 2.2s ease-in-out 0s infinite alternate, sakura23 3.4s ease 0s infinite alternate
+  animation sakura00 0s step-end 2.3s backwards, sakura06 30s ease-out 2.3s infinite normal, sakura12 2.2s ease-in-out 0s infinite alternate, sakura23 3.4s ease 0s infinite alternate
 
 #sakura7
   z-index 0
-  animation sakura07 10s ease-out 1.4s infinite normal, sakura12 2s ease-in-out 0s infinite alternate, sakura22 3s ease 0s infinite alternate
+  animation sakura00 0s step-end 1.4s backwards, sakura07 10s ease-out 1.4s infinite normal, sakura12 2s ease-in-out 0s infinite alternate, sakura22 3s ease 0s infinite alternate
 
 #sakura8
   z-index 10
-  animation sakura02 40s ease-out 3s infinite normal, sakura11 2.5s ease-in-out 0s infinite alternate, sakura23 3.8s ease 0s infinite alternate
+  animation sakura00 0s step-end 3s backwards, sakura02 40s ease-out 3s infinite normal, sakura11 2.5s ease-in-out 0s infinite alternate, sakura23 3.8s ease 0s infinite alternate
 
 #sakura9
   z-index 4
-  animation sakura01 12s ease-out 5s infinite normal, sakura11 2.4s ease-in-out 0s infinite alternate, sakura21 4s ease 0s infinite alternate
+  animation sakura00 0s step-end 5s backwards, sakura01 12s ease-out 5s infinite normal, sakura11 2.4s ease-in-out 0s infinite alternate, sakura21 4s ease 0s infinite alternate
 
 #sakura10
   z-index 0
-  animation sakura05 11s ease-out 0.5s infinite normal, sakura12 2.6s ease-in-out 0s infinite alternate, sakura23 2.2s ease 0s infinite alternate
+  animation sakura00 0s step-end 2.6s backwards, sakura05 11s ease-out 0.5s infinite normal, sakura12 2.6s ease-in-out 0s infinite alternate, sakura23 2.2s ease 0s infinite alternate
 
 #sakura11
   z-index 10
-  animation sakura03 16s ease-out 2s infinite normal, sakura11 3s ease-in-out 0s infinite alternate, sakura21 3.6s ease 0s infinite alternate
+  animation sakura00 0s step-end 2s backwards, sakura03 16s ease-out 2s infinite normal, sakura11 3s ease-in-out 0s infinite alternate, sakura21 3.6s ease 0s infinite alternate
 
 #sakura12
   z-index 2
-  animation sakura07 15s ease-out 3s infinite normal, sakura12 2.8s ease-in-out 0s infinite alternate, sakura22 3.2s ease 0s infinite alternate
+  animation sakura00 0s step-end 3s backwards, sakura07 15s ease-out 3s infinite normal, sakura12 2.8s ease-in-out 0s infinite alternate, sakura22 3.2s ease 0s infinite alternate
+
+@keyframes sakura00
+  0%
+    opacity 0
+  100%
+    opacity 1
 
 @keyframes sakura01
   0%
     top -50px
     left 50%
-    opacity 1
   100%
     top 100%
     left 20%
-    opacity 1
 
 @keyframes sakura02
   0%
     top -50px
     left 80%
-    opacity 1
   100%
     top 100%
     left 30%
-    opacity 1
 
 @keyframes sakura03
   0%
     top -50px
     left 105%
-    opacity 1
   100%
     top 100%
     left 40%
-    opacity 1
 
 @keyframes sakura04
   0%
     top -50px
     left 75%
-    opacity 1
   100%
     top 100%
     left 60%
-    opacity 1
 
 @keyframes sakura05
   0%
     top -50px
     left 90%
-    opacity 1
   100%
     top 100%
     left -5%
-    opacity 1
 
 @keyframes sakura06
   0%
     top -50px
     left 50%
-    opacity 1
   100%
     top 100%
     left 10%
-    opacity 1
 
 @keyframes sakura07
   0%
     top -50px
     left 80%
-    opacity 1
   100%
     top 100%
     left -5%
-    opacity 1
 
 @keyframes sakura11
   0%

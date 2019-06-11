@@ -1,39 +1,38 @@
 <template lang="pug">
-  .menu
-    nav
-      .navbar-burger(
-        :class="{ \
-          'is-active': isMenuActive, \
-          'is-title': isTitle \
-        }"
-        data-target="navMenu"
-        @click="$store.commit('siteMenu/toggle')"
-      )
-        span
-        span
-        span
-      .navbar-menu(
-        id="navMenu"
-        :class="{ \
-          'is-active': isMenuActive, \
-          'is-title': isTitle \
-        }"
-      )
-        ul.menu-list
-          li.menu-item(v-for="item in items" :key="item.name")
-            nuxt-link(
-              :to="item.link"
-              :class="{'is-title': isTitle}"
-            )
-              span {{ item.name }}
-                span.en {{ item.nameEn }}
-          li.menu-item.link-container
-            a(href="https://twitter.com/emily_discord/" target="_blank")
-              span
-                font-awesome-icon(:icon="['fab', 'discord']")
-            a(href="https://discord.gg/YHVsB9S" target="_blank")
-              span
-                font-awesome-icon(:icon="['fab', 'twitter-square']")
+nav.menu
+  .navbar-burger(
+    :class="{ \
+      'is-active': isMenuActive, \
+      'is-title': isTitle \
+    }"
+    data-target="navMenu"
+    @click="$store.commit('siteMenu/toggle')"
+  )
+    span
+    span
+    span
+  .navbar-menu(
+    id="navMenu"
+    :class="{ \
+      'is-active': isMenuActive, \
+      'is-title': isTitle \
+    }"
+  )
+    ul.menu-list
+      li.menu-item(v-for="item in items" :key="item.name")
+        nuxt-link(
+          :to="item.link"
+          :class="{'is-title': isTitle}"
+        )
+          span {{ item.name }}
+            span.en {{ item.nameEn }}
+      li.menu-item.link-container
+        a(href="https://twitter.com/emily_discord/" target="_blank")
+          span
+            font-awesome-icon(:icon="['fab', 'discord']")
+        a(href="https://discord.gg/YHVsB9S" target="_blank")
+          span
+            font-awesome-icon(:icon="['fab', 'twitter-square']")
 </template>
 
 <script lang="ts">
@@ -85,6 +84,7 @@ export default class SiteMenu extends Vue {
 <style lang="stylus" scoped>
 .menu
   display flex
+  flex-direction column
 
 .menu-list
   display flex
@@ -95,21 +95,20 @@ export default class SiteMenu extends Vue {
     flex-direction row
 
 .menu-item
-  width 100px
+  margin 10px
   color #f8f8f8
   letter-spacing 0
   font-size 20px
+  +tablet()
+    margin 40px
   a
-    position relative
     display inline
-    padding 20px 30px
     color #161616
     text-align left
     text-decoration none
     white-space nowrap
-    font-size 90%
     line-height 90%
-    writing-mode rl
+    writing-mode horizontal-tb
     +tablet()
       font-size 120%
       writing-mode vertical-rl
@@ -131,17 +130,12 @@ export default class SiteMenu extends Vue {
 
 .navbar-burger
   position relative
+  display block
   margin-left auto
   width 3.25rem
   height 3.25rem
   cursor pointer
-
-@media screen and (max-width: 768px)
-  .navbar-burger
-    display block
-
-@media screen and (min-width: 769px)
-  .navbar-burger
+  +tablet()
     display none
 
 .navbar-burger span
