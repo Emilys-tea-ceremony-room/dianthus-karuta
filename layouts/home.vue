@@ -84,18 +84,11 @@ export default class Default extends Vue {}
   flex-direction column
 
 .logo-title-ja
-  display block
   height 60vh
-
-.en
-  letter-spacing 0
 
 .logo-mark
   display block
-  margin auto
-  width 20px
-  +tablet()
-    width 40px
+  height 40px
 
 .link-container
   display flex

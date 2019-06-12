@@ -38,7 +38,8 @@ const config: NuxtConfiguration = {
     '@nuxtjs/axios',
     '@nuxtjs/eslint-module',
     'nuxt-fontawesome',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/google-analytics'
   ],
   /*
    ** Axios module configuration
@@ -72,6 +73,9 @@ const config: NuxtConfiguration = {
   },
   styleResources: {
     stylus: ['@/assets/stylus/mixins.styl']
+  },
+  googleAnalytics: {
+    id: 'UA-141919453-1'
   }
 }
 
