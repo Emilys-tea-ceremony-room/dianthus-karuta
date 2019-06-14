@@ -2,13 +2,14 @@
 .container
   //- .emily
   //-   img(src="~/assets/home_emily.png")
-  sakura.sakura-container
+  sakura
   .background-image
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 import Sakura from '~/components/Sakura.vue'
+import { titleStore } from '~/store'
 
 @Component({
   components: {
@@ -19,10 +20,9 @@ export default class Index extends Vue {
   layout() {
     return 'home'
   }
-
-  fetch({ store }) {
-    store.commit('siteMenu/reset')
-    store.commit('title/set')
+  beforeRouteLeave(to, from, next) {
+    titleStore.SET_VIEWED()
+    next()
   }
 }
 </script>
@@ -30,14 +30,6 @@ export default class Index extends Vue {
 <style lang="stylus" scoped>
 .container
   height 100%
-
-.sakura-container
-  position absolute
-  top 0
-  right 0
-  bottom 0
-  left 0
-  overflow hidden
 
 .background-image
   width 100%

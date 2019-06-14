@@ -11,6 +11,15 @@ export default class Sakura extends Vue {}
 </script>
 
 <style lang="stylus" scoped>
+.sakura-container
+  position absolute
+  top 0
+  right 0
+  bottom 0
+  left 0
+  overflow hidden
+  pointer-events none
+
 .sakura
   position absolute
   width 0

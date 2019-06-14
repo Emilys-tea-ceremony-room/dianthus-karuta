@@ -1,41 +1,49 @@
 <template lang="pug">
-.profile-container
-  .profile
-    .name エミリー・スチュアート
-    .name_en Emily Stewart
-    ul.detail-container
-      li.detail
-        .left 年齢
-        .right 13歳
-      li.detail
-        .left 誕生日
-        .right 1月 8日
-      li.detail
-        .left 出身地
-        .right イギリス
-      li.detail
-        .left 好きなもの
-        .right 抹茶
-      li.detail
-        .left 趣味
-        .right かるた遊び
+.container
+  .profile-container
+    sakura
+    .profile
+      .name エミリー・スチュアート
+      .name_en Emily Stewart
+      ul.detail-container
+        li.detail
+          .left 年齢
+          .right 13歳
+        li.detail
+          .left 誕生日
+          .right 1月 8日
+        li.detail
+          .left 出身地
+          .right イギリス
+        li.detail
+          .left 好きなもの
+          .right 抹茶
+        li.detail
+          .left 趣味
+          .right かるた遊び
+  .biography
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
+import Sakura from '~/components/Sakura.vue'
 
-@Component
-export default class Profile extends Vue {
-  fetch({ store }) {
-    store.commit('siteMenu/reset')
-    store.commit('title/reset')
+@Component({
+  components: {
+    Sakura
   }
-}
+})
+export default class Profile extends Vue {}
 </script>
 
 <style lang="stylus" scoped>
+.container
+  position relative
+  width 100%
+
 .profile-container
   width 100%
+  height 100%
   border-top 30px
   background url('~assets/profile_bg.png') no-repeat center
   background-position top center

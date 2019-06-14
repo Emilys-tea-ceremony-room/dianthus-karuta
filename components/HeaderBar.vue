@@ -30,6 +30,8 @@ export default class HeaderBar extends Vue {}
 
 <style lang="stylus" scoped>
 .header-container
+  position absolute
+  top 0
   display flex
   width 100%
   height 80px

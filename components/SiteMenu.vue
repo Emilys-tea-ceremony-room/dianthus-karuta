@@ -1,28 +1,21 @@
 <template lang="pug">
 nav.menu
   .navbar-burger(
-    :class="{ \
-      'is-active': isMenuActive, \
-      'is-title': isTitle \
-    }"
+    :class="{ 'is-active': isMenuActive, }"
     data-target="navMenu"
-    @click="$store.commit('siteMenu/toggle')"
+    @click="toggleMenu"
   )
     span
     span
     span
   .navbar-menu(
     id="navMenu"
-    :class="{ \
-      'is-active': isMenuActive, \
-      'is-title': isTitle \
-    }"
+    :class="{ 'is-active': isMenuActive, }"
   )
     ul.menu-list
       li.menu-item(v-for="item in items" :key="item.name")
-        nuxt-link(
+        n-link(
           :to="item.link"
-          :class="{'is-title': isTitle}"
         )
           span {{ item.name }}
             span.en {{ item.nameEn }}
@@ -36,7 +29,8 @@ nav.menu
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
+import { Component, Vue, Watch } from 'nuxt-property-decorator'
+import { siteMenuStore } from '@/store'
 
 @Component
 export default class SiteMenu extends Vue {
@@ -72,11 +66,18 @@ export default class SiteMenu extends Vue {
           nameEn: "Links"
         } */
   ]
+
   get isMenuActive() {
-    return this.$store.state.siteMenu.isMenuActive
+    return siteMenuStore.isMenuActive
   }
-  get isTitle() {
-    return this.$store.state.title.isTitle
+
+  toggleMenu() {
+    siteMenuStore.ToggleMenu()
+  }
+
+  @Watch('$route')
+  onRouteChanged() {
+    siteMenuStore.CloseMenu()
   }
 }
 </script>

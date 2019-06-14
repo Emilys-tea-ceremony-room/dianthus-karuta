@@ -4,7 +4,7 @@
       header-bar.header-bar
       .contents
         nuxt
-      footer-bar.footer-bar
+      //- footer-bar.footer-bar
 </template>
 
 <script lang="ts">
@@ -36,6 +36,7 @@ export default class Default extends Vue {}
   flex-direction column
   justify-content center
   align-items center
+  overflow hidden
   min-width 320px
   min-height 480px
   border 15px solid #467837
@@ -47,8 +48,10 @@ export default class Default extends Vue {}
 .contents
   display flex
   flex-grow 1
+  overflow-y scroll
+  padding-top 80px
   width 100%
-  background #b4d2a6
+  background #fff
 
 .footer-bar
   position absolute
