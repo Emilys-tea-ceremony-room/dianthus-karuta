@@ -17,6 +17,7 @@ export default class Error extends Vue {}
 <style lang="stylus" scoped>
 .error-container
   width 100%
+  height 100%
   border-top 30px
   background-color #554171
 
