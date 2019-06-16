@@ -23,17 +23,18 @@ export default class Error extends Vue {}
 
 .error-background
   position absolute
-  top 0
+  // top 0
   bottom 0
   left -20%
   width 100%
+  height 80%
   background url('~assets/404_emily.png') no-repeat center
   background-size auto 100%
 
 .error
   position absolute
-  top 55%
-  right 5%
+  top 65%
+  right 8%
   z-index 0
   padding 14px
   min-width 240px
@@ -42,8 +43,8 @@ export default class Error extends Vue {}
   font-size 14px
   +tablet()
     top 30%
-    left 55%
-    width 220px
+    left 45%
+    width 280px
     font-size 16px
   &::before
     position absolute

@@ -3,9 +3,10 @@ header.header-container(:class="{'home': isTitle, 'first-view': isFirstView}")
   .header-bar
     .logo-container
       nuxt-link.logo-title(to="/")
-        img.logo-title-ja(v-if="isTitle" src="~/assets/emily_logo-text-ja.svg")
-        img.logo-title-ja-h(v-else src="~/assets/emily_logo-text-ja-h.svg")
-        img.logo-mark(src="~/assets/emily_logo.svg")
+        transition(name="fade" mode="out-in")
+          img.logo-title-ja(v-if="isTitle" key="v" src="@/assets/emily_logo-text-ja.svg")
+          img.logo-title-ja-h(v-else key="h" src="@/assets/emily_logo-text-ja-h.svg")
+        img.logo-mark(src="@/assets/emily_logo.svg")
       .link-container
         a(href="https://discord.gg/YHVsB9S", target="_blank")
           span.link-icon
@@ -89,7 +90,6 @@ export default class HeaderBar extends Vue {
   height 60vh
 
 .logo-title-ja-h
-  display block
   height 72px
 
 .en
@@ -133,4 +133,10 @@ export default class HeaderBar extends Vue {
 @keyframes arrival
   100%
     opacity 1
+
+.fade-enter-active, .fade-leave-active
+  transition opacity 0.5s
+
+.fade-enter, .fade-leave-to
+  opacity 0
 </style>
