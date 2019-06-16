@@ -1,7 +1,7 @@
 <template lang="pug">
 nav.menu
   .navbar-burger(
-    :class="{ 'is-active': isMenuActive, }"
+    :class="{ 'is-active': isMenuActive }"
     data-target="navMenu"
     @click="toggleMenu"
   )
@@ -13,7 +13,7 @@ nav.menu
     :class="{ 'is-active': isMenuActive, }"
   )
     ul.menu-list
-      li.menu-item(v-for="item in items" :key="item.name")
+      li.menu-item(v-for="item in menuItems" :key="item.name")
         n-link(
           :to="item.link"
         )
@@ -30,63 +30,30 @@ nav.menu
 
 <script lang="ts">
 import { Component, Vue, Watch } from 'nuxt-property-decorator'
-import { siteMenuStore } from '@/store'
+import { siteMenuModule } from '@/store'
 
 @Component
 export default class SiteMenu extends Vue {
-  items = [
-    /* {
-          link: "/",
-          name: "新着情報",
-          nameEn: "News"
-        }, */
-    {
-      link: '/profile',
-      name: '人物紹介',
-      nameEn: 'Profile'
-    }
-    /* {
-          link: "/",
-          name: "活動記録",
-          nameEn: "History"
-        },
-        {
-          link: "/",
-          name: "作品目録",
-          nameEn: "Discography"
-        }, */
-    /* {
-          link: "/",
-          name: "撫子歌留多",
-          nameEn: "Nadeshiko Karuta"
-        }, */
-    /* {
-          link: "/",
-          name: "電子案内",
-          nameEn: "Links"
-        } */
-  ]
+  get menuItems() {
+    return siteMenuModule.menuItems
+  }
 
   get isMenuActive() {
-    return siteMenuStore.isMenuActive
+    return siteMenuModule.isMenuActive
   }
 
   toggleMenu() {
-    siteMenuStore.ToggleMenu()
+    siteMenuModule.ToggleMenu()
   }
 
   @Watch('$route')
   onRouteChanged() {
-    siteMenuStore.CloseMenu()
+    siteMenuModule.CLOSE_MENU()
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-.menu
-  display flex
-  flex-direction column
-
 .menu-list
   display flex
   flex-direction column
@@ -113,18 +80,14 @@ export default class SiteMenu extends Vue {
     +tablet()
       font-size 120%
       writing-mode vertical-rl
-
-.menu-item a > span
-  position relative
-  display block
-  text-shadow 0px 0px 6px #fff
-
-.menu-item a span.en
-  display block
-  font-size 13px
-
-.en
-  letter-spacing 0
+    span
+      position relative
+      display block
+      text-shadow 0px 0px 6px #fff
+      &.en
+        display block
+        letter-spacing 0
+        font-size 13px
 
 .link-container
   display none
@@ -135,43 +98,34 @@ export default class SiteMenu extends Vue {
   margin-left auto
   width 3.25rem
   height 3.25rem
+  background-color rgba(255, 255, 255, 0.2)
   cursor pointer
   +tablet()
     display none
-
-.navbar-burger span
-  position absolute
-  left calc(50% - 8px)
-  display block
-  width 16px
-  height 2px
-  background-color currentColor
-  box-shadow 0 0 16px 1px #fff
-  transition-timing-function ease-out
-  transition-duration 86ms
-  transition-property background-color, opacity, transform
-  transform-origin center
-
-.navbar-burger span:nth-child(1)
-  top calc(50% - 6px)
-
-.navbar-burger span:nth-child(2)
-  top calc(50% - 1px)
-
-.navbar-burger span:nth-child(3)
-  top calc(50% + 4px)
-
-.navbar-burger:hover
-  background-color rgba(0, 0, 0, 0.15)
-
-.navbar-burger.is-active span:nth-child(1)
-  transform translateY(5px) rotate(45deg)
-
-.navbar-burger.is-active span:nth-child(2)
-  opacity 0
-
-.navbar-burger.is-active span:nth-child(3)
-  transform translateY(-5px) rotate(-45deg)
+  & span
+    position absolute
+    left calc(50% - 8px)
+    display block
+    width 16px
+    height 2px
+    background-color currentColor
+    transition-timing-function ease-out
+    transition-duration 86ms
+    transition-property background-color, opacity, transform
+    transform-origin center
+    &:nth-child(1)
+      top calc(50% - 6px)
+    &:nth-child(2)
+      top calc(50% - 1px)
+    &:nth-child(3)
+      top calc(50% + 4px)
+  &.is-active span
+    &:nth-child(1)
+      transform translateY(5px) rotate(45deg)
+    &:nth-child(2)
+      opacity 0
+    &:nth-child(3)
+      transform translateY(-5px) rotate(-45deg)
 
 .navbar-menu
   display none
@@ -180,7 +134,6 @@ export default class SiteMenu extends Vue {
   box-shadow 0 0 16px rgba(10, 10, 10, 0.1)
   +tablet()
     display block
-
-.navbar-menu.is-active
-  display block
+  &.is-active
+    display block
 </style>
