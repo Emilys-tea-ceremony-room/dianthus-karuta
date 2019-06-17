@@ -34,7 +34,7 @@ export default class Index extends Vue {
 .background-image
   width 100%
   height 100%
-  background url('~assets/tearoom.jpg') no-repeat center
+  background url('~assets/background/tearoom.jpg') no-repeat center
   background-size cover
 
 .emily
