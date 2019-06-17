@@ -3,38 +3,6 @@ import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators'
 @Module({ namespaced: true, name: 'siteMenu', stateFactory: true })
 export default class SiteMenu extends VuexModule {
   isMenuActive = false
-  menuItems = [
-    /* {
-          link: "/",
-          name: "新着情報",
-          nameEn: "News"
-        }, */
-    {
-      link: '/profile',
-      name: '人物紹介',
-      nameEn: 'Profile'
-    }
-    /* {
-          link: "/",
-          name: "活動記録",
-          nameEn: "History"
-        },
-        {
-          link: "/",
-          name: "作品目録",
-          nameEn: "Discography"
-        }, */
-    /* {
-          link: "/",
-          name: "撫子歌留多",
-          nameEn: "Nadeshiko Karuta"
-        }, */
-    /* {
-          link: "/",
-          name: "電子案内",
-          nameEn: "Links"
-        } */
-  ]
 
   @Mutation
   CLOSE_MENU() {
@@ -50,12 +18,18 @@ export default class SiteMenu extends VuexModule {
     this.isMenuActive = !this.isMenuActive
   }
 
-  @Action
+  @Action({})
+  OpenMenu() {
+    this.OPEN_MENU()
+  }
+
+  @Action({})
+  CloseMenu() {
+    this.CLOSE_MENU()
+  }
+
+  @Action({})
   ToggleMenu() {
-    if (this.isMenuActive) {
-      this.CLOSE_MENU()
-    } else {
-      this.OPEN_MENU()
-    }
+    this.TOGGLE_MENU_ACTIVE()
   }
 }

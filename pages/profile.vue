@@ -40,13 +40,12 @@ export default class Profile extends Vue {}
 .container
   position relative
   width 100%
-  height 100%
 
 .profile-container
   width 100%
   height 100%
   border-top 30px
-  background url('~assets/profile/profile_bg.png') no-repeat center
+  background url('~assets/profile_bg.png') no-repeat center
   background-position top center
   background-size cover
 
