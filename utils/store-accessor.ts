@@ -3,12 +3,12 @@ import { getModule } from 'vuex-module-decorators'
 import title from '@/store/title'
 import siteMenu from '@/store/siteMenu'
 
-let titleStore: title
-let siteMenuStore: siteMenu
+let titleModule: title
+let siteMenuModule: siteMenu
 
 function initialiseStores(store: Store<any>): void {
-  titleStore = getModule(title, store)
-  siteMenuStore = getModule(siteMenu, store)
+  titleModule = getModule(title, store)
+  siteMenuModule = getModule(siteMenu, store)
 }
 
-export { initialiseStores, titleStore, siteMenuStore }
+export { initialiseStores, titleModule, siteMenuModule }

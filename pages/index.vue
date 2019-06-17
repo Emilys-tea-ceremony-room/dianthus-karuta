@@ -1,15 +1,15 @@
 <template lang="pug">
 .container
   //- .emily
-  //-   img(src="~/assets/home_emily.png")
+  //-   img(src="@/assets/home_emily.png")
   sakura
   .background-image
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import Sakura from '~/components/Sakura.vue'
-import { titleStore } from '~/store'
+import Sakura from '@/components/Sakura.vue'
+import { titleModule } from '@/store'
 
 @Component({
   components: {
@@ -17,11 +17,11 @@ import { titleStore } from '~/store'
   }
 })
 export default class Index extends Vue {
-  layout() {
-    return 'home'
+  get isFirstView() {
+    return titleModule.isFirstView
   }
   beforeRouteLeave(to, from, next) {
-    titleStore.SET_VIEWED()
+    titleModule.SET_VIEWED()
     next()
   }
 }
