@@ -6,7 +6,9 @@ header.header-container(:class="{'home': isTitle, 'first-view': isFirstView}")
         transition(name="fade" mode="out-in")
           img.logo-title-ja(v-if="isTitle" key="v" src="@/assets/emily_logo-text-ja.svg")
           img.logo-title-ja-h(v-else key="h" src="@/assets/emily_logo-text-ja-h.svg")
-        img.logo-mark(src="@/assets/emily_logo.svg")
+        .logo-mark-container
+          img.logo-mark(src="@/assets/emily_logo.svg")
+          img.logo-mark.pulse(v-if="isFirstView" src="@/assets/emily_logo.svg")
       .link-container
         a(href="https://discord.gg/YHVsB9S", target="_blank")
           span.link-icon
@@ -95,9 +97,26 @@ export default class HeaderBar extends Vue {
 .en
   letter-spacing 0
 
+.logo-mark-container
+  position relative
+  .home &
+    margin-top 10px
+
 .logo-mark
-  display block
   height 40px
+  &.pulse
+    position absolute
+    top 0
+    left 0
+    opacity 0
+    animation logo-pulse 3s 1.2s forwards
+
+@keyframes logo-pulse
+  0%
+    opacity 0.4
+  70%
+    opacity 0
+    transform scale(1.5)
 
 .link-container
   display none
