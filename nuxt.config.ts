@@ -6,15 +6,41 @@ const config: NuxtConfiguration = {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'なでしこかるた',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
-      }
+        content: 'エミリー スチュアート ファンサイト。'
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'なでしこかるた'
+      },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://nadeshikokaruta.com'
+      },
+      { hid: 'og:title', property: 'og:title', content: 'なでしこかるた' },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: 'エミリー スチュアート ファンサイト。'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://nadeshikokaruta.com/summary.png'
+      },
+      // { property: 'article:publisher', content: 'FacebookURL' },
+      // { property: 'fb:app_id', content: 'FacebookAppID' },
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:site', content: '@Emily_Discord' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
