@@ -121,11 +121,6 @@ export default class HeaderBar extends Vue {
   font-size 50%
 
 .site-menu
-  position absolute
-  top 0
-  right 0
-  +tablet()
-    padding 40px 60px
   .title .first-view &
     opacity 0
     animation arrival 1s ease-in-out 2.7s forwards

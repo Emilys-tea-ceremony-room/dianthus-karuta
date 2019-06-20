@@ -10,12 +10,13 @@ nav.menu
     span
   .navbar-menu(
     id="navMenu"
-    :class="{ 'is-active': isMenuActive, }"
+    v-if="isMenuActive"
   )
     ul.menu-list
       li.menu-item(v-for="item in menuItems" :key="item.name")
         n-link(
           :to="item.link"
+          @click.native="closeMenu"
         )
           span {{ item.name }}
             span.en {{ item.nameEn }}
@@ -46,6 +47,10 @@ export default class SiteMenu extends Vue {
     siteMenuModule.ToggleMenu()
   }
 
+  closeMenu() {
+    siteMenuModule.CLOSE_MENU()
+  }
+
   @Watch('$route')
   onRouteChanged() {
     siteMenuModule.CLOSE_MENU()
@@ -54,54 +59,15 @@ export default class SiteMenu extends Vue {
 </script>
 
 <style lang="stylus" scoped>
-.menu-list
-  display flex
-  flex-direction column
-  justify-content flex-end
-  align-items stretch
-  +tablet()
-    flex-direction row
-
-.menu-item
-  margin 10px
-  color #f8f8f8
-  letter-spacing 0
-  font-size 20px
-  +tablet()
-    margin 40px
-  a
-    display inline
-    color #161616
-    text-align left
-    text-decoration none
-    white-space nowrap
-    line-height 90%
-    writing-mode horizontal-tb
-    +tablet()
-      font-size 120%
-      writing-mode vertical-rl
-    span
-      position relative
-      display block
-      text-shadow 0px 0px 6px #fff
-      &.en
-        display block
-        letter-spacing 0
-        font-size 13px
-
-.link-container
-  display none
-
 .navbar-burger
-  position relative
-  display block
-  margin-left auto
-  width 3.25rem
-  height 3.25rem
+  position absolute
+  top 20px
+  right 20px
+  z-index 10
+  width 40px
+  height 40px
   background-color rgba(255, 255, 255, 0.2)
   cursor pointer
-  +tablet()
-    display none
   & span
     position absolute
     left calc(50% - 8px)
@@ -128,12 +94,45 @@ export default class SiteMenu extends Vue {
       transform translateY(-5px) rotate(-45deg)
 
 .navbar-menu
+  position absolute
+  top 0
+  left 0
+  overflow-y scroll
+  padding-top 80px
+  width 100%
+  height 100%
+  background-color rgba(252, 252, 252, 0.82)
+
+.menu-list
+  display flex
+  flex-direction column
+  justify-content flex-end
+  align-items stretch
+
+.menu-item
+  padding 10px
+  color #f8f8f8
+  letter-spacing 0
+  font-size 24px
+  a
+    display inline
+    color #161616
+    text-align center
+    text-decoration none
+    white-space nowrap
+    line-height 40%
+    writing-mode horizontal-tb
+    span
+      text-shadow 0px 0px 6px #fff
+      &.en
+        display block
+        letter-spacing 0
+        font-size 16px
+
+@keyframes feadin
+  0%
+    opacity 0
+
+.link-container
   display none
-  padding 0.5rem 0
-  background-color rgba(216, 216, 216, 0.6)
-  box-shadow 0 0 16px rgba(10, 10, 10, 0.1)
-  +tablet()
-    display block
-  &.is-active
-    display block
 </style>

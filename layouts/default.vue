@@ -82,8 +82,10 @@ export default class Default extends Vue {
   width 100%
   height 100%
   background #fff
+  transition padding 0.5s 0.5s
   .title &
     padding-top 0px
+    transition padding 0.5s
 
 .footer-bar
   position absolute

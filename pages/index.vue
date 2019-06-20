@@ -29,13 +29,18 @@ export default class Index extends Vue {
 
 <style lang="stylus" scoped>
 .container
+  overflow hidden
   height 100%
 
 .background-image
-  width 100%
   height 100%
   background url('~assets/background/tearoom.jpg') no-repeat center
   background-size cover
+  animation move 8s forwards
+
+@keyframes move
+  0%
+    transform scale(1.05)
 
 .emily
   position absolute
