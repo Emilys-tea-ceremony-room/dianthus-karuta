@@ -47,9 +47,11 @@ export default class HeaderBar extends Vue {
   top 0
   left 0
   display flex
+  justify-content space-around
   width 100%
   height 80px
   background rgb(252, 252, 246)
+  box-shadow 0 0 6px 0
   opacity 0.85
   transition height 1s
   .home &
@@ -60,12 +62,15 @@ export default class HeaderBar extends Vue {
     .first-view&
       width 100%
       opacity 1
-      animation open 1.2s ease-in-out 2.5s forwards
+      animation open 1.2s ease-in-out 2.5s forwards, clear 2s 1.8s forwards
 
 @keyframes open
   100%
     width 30%
-    opacity 0.8
+
+@keyframes clear
+  100%
+    opacity 0.85
 
 .logo-container
   display flex

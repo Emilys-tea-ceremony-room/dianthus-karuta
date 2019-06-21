@@ -13,17 +13,17 @@ export default class SiteMenu extends VuexModule {
       link: '/profile',
       name: '人物紹介',
       nameEn: 'Profile'
-    }
+    },
     // {
     //   link: '/',
     //   name: '活動記録',
     //   nameEn: 'History'
     // },
-    // {
-    //   link: '/',
-    //   name: '作品目録',
-    //   nameEn: 'Discography'
-    // },
+    {
+      link: '/',
+      name: '作品目録',
+      nameEn: 'Discography'
+    }
     // {
     //   link: '/',
     //   name: '撫子歌留多',

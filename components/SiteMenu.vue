@@ -8,25 +8,24 @@ nav.menu
     span
     span
     span
-  .navbar-menu(
+  ul.navbar-menu.menu-list(
     id="navMenu"
-    v-if="isMenuActive"
+    :class="{'menu-active': isMenuActive}"
   )
-    ul.menu-list
-      li.menu-item(v-for="item in menuItems" :key="item.name")
-        n-link(
-          :to="item.link"
-          @click.native="closeMenu"
-        )
-          span {{ item.name }}
-            span.en {{ item.nameEn }}
-      li.menu-item.link-container
-        a(href="https://twitter.com/emily_discord/" target="_blank")
-          span
-            font-awesome-icon(:icon="['fab', 'discord']")
-        a(href="https://discord.gg/YHVsB9S" target="_blank")
-          span
-            font-awesome-icon(:icon="['fab', 'twitter-square']")
+    li.menu-item(v-for="item, index in menuItems" :key="item.name" )
+      n-link(
+        :to="item.link"
+        @click.native="closeMenu"
+      )
+        span {{ item.name }}
+          span.en {{ item.nameEn }}
+    li.menu-item.link-container
+      a(href="https://twitter.com/emily_discord/" target="_blank")
+        span
+          font-awesome-icon(:icon="['fab', 'discord']")
+      a(href="https://discord.gg/YHVsB9S" target="_blank")
+        span
+          font-awesome-icon(:icon="['fab', 'twitter-square']")
 </template>
 
 <script lang="ts">
@@ -35,6 +34,7 @@ import { siteMenuModule } from '@/store'
 
 @Component
 export default class SiteMenu extends Vue {
+  el
   get menuItems() {
     return siteMenuModule.menuItems
   }
@@ -97,24 +97,32 @@ export default class SiteMenu extends Vue {
   position absolute
   top 0
   left 0
+  display flex
+  flex-direction column
+  align-items stretch
   overflow-y scroll
   padding-top 80px
+  transform translateY(-100%)
+  opacity 0
+  z-index -5
   width 100%
   height 100%
   background-color rgba(252, 252, 252, 0.82)
-
-.menu-list
-  display flex
-  flex-direction column
-  justify-content flex-end
-  align-items stretch
+  transition all 0.5s
+  &.menu-active
+    opacity 1
+    transform translateY(0)
 
 .menu-item
   padding 10px
   color #f8f8f8
   letter-spacing 0
   font-size 24px
-  a
+  for i in (1..12)
+    .menu-active &:nth-child({i})
+      opacity 0
+      animation fade-in 1s (0.2 + 0.1 * (i)s) forwards
+  & a
     display inline
     color #161616
     text-align center
@@ -122,16 +130,16 @@ export default class SiteMenu extends Vue {
     white-space nowrap
     line-height 40%
     writing-mode horizontal-tb
-    span
+    & span
       text-shadow 0px 0px 6px #fff
       &.en
         display block
         letter-spacing 0
         font-size 16px
 
-@keyframes feadin
-  0%
-    opacity 0
+@keyframes fade-in
+  100%
+    opacity 1
 
 .link-container
   display none
