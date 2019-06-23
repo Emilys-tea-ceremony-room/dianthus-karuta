@@ -12,7 +12,7 @@ nav.menu
     id="navMenu"
     :class="{'menu-active': isMenuActive}"
   )
-    li.menu-item(v-for="item, index in menuItems" :key="item.name" )
+    li.menu-item(v-for="item, index in menuItems" :key="item.name")
       n-link(
         :to="item.link"
         @click.native="closeMenu"
@@ -97,18 +97,18 @@ export default class SiteMenu extends Vue {
   position absolute
   top 0
   left 0
+  z-index -5
   display flex
   flex-direction column
   align-items stretch
   overflow-y scroll
   padding-top 80px
-  transform translateY(-100%)
-  opacity 0
-  z-index -5
   width 100%
   height 100%
   background-color rgba(252, 252, 252, 0.82)
+  opacity 0
   transition all 0.5s
+  transform translateY(-100%)
   &.menu-active
     opacity 1
     transform translateY(0)
@@ -118,10 +118,10 @@ export default class SiteMenu extends Vue {
   color #f8f8f8
   letter-spacing 0
   font-size 24px
-  for i in (1..12)
+  for i in (1 .. 12)
     .menu-active &:nth-child({i})
       opacity 0
-      animation fade-in 1s (0.2 + 0.1 * (i)s) forwards
+      animation fade-in 1s 0.2 + 0.1 * i s forwards
   & a
     display inline
     color #161616

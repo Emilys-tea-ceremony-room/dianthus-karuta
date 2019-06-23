@@ -7,38 +7,38 @@ export default class SiteMenu extends VuexModule {
     // {
     //   link: '/',
     //   name: '新着情報',
-    //   nameEn: 'News'
+    //   nameEn: 'News',
     // },
     {
       link: '/profile',
       name: '人物紹介',
-      nameEn: 'Profile'
+      nameEn: 'Profile',
     },
     // {
     //   link: '/',
     //   name: '活動記録',
-    //   nameEn: 'History'
+    //   nameEn: 'History',
     // },
-    {
-      link: '/',
-      name: '作品目録',
-      nameEn: 'Discography'
-    }
+    // {
+    //   link: '/discography',
+    //   name: '作品目録',
+    //   nameEn: 'Discography',
+    // },
     // {
     //   link: '/',
     //   name: '撫子歌留多',
-    //   nameEn: 'Nadeshiko Karuta'
+    //   nameEn: 'Nadeshiko Karuta',
     // },
     // {
     //   link: '/',
     //   name: '茶室',
-    //   nameEn: 'Tea ceremony room'
+    //   nameEn: 'Tea ceremony room',
     // },
     // {
     //   link: '/',
     //   name: '電子案内',
-    //   nameEn: 'Links'
-    // }
+    //   nameEn: 'Links',
+    // },
   ]
 
   @Mutation

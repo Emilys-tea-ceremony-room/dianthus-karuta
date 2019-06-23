@@ -13,36 +13,36 @@ const config: NuxtConfiguration = {
       {
         hid: 'description',
         name: 'description',
-        content: 'エミリー スチュアート ファンサイト。'
+        content: 'エミリー スチュアート ファンサイト。',
       },
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: 'なでしこかるた'
+        content: 'なでしこかるた',
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://nadeshikokaruta.com'
+        content: 'https://nadeshikokaruta.com/',
       },
       { hid: 'og:title', property: 'og:title', content: 'なでしこかるた' },
       {
         hid: 'og:description',
         property: 'og:description',
-        content: 'エミリー スチュアート ファンサイト。'
+        content: 'エミリー スチュアート ファンサイト。',
       },
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://nadeshikokaruta.com/summary.png'
+        content: 'https://nadeshikokaruta.com/summary.png',
       },
       // { property: 'article:publisher', content: 'FacebookURL' },
       // { property: 'fb:app_id', content: 'FacebookAppID' },
       { name: 'twitter:card', content: 'summary' },
-      { name: 'twitter:site', content: '@Emily_Discord' }
+      { name: 'twitter:site', content: '@Emily_Discord' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   /*
    ** Customize the progress-bar color
@@ -65,7 +65,9 @@ const config: NuxtConfiguration = {
     '@nuxtjs/eslint-module',
     'nuxt-fontawesome',
     '@nuxtjs/style-resources',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    // 'nuxt-i18n',
+    '@nuxtjs/sitemap',
   ],
   /*
    ** Axios module configuration
@@ -79,30 +81,33 @@ const config: NuxtConfiguration = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
   },
   fontawesome: {
     imports: [
       {
         set: '@fortawesome/free-solid-svg-icons',
-        icons: ['fas']
+        icons: ['fas'],
       },
       {
         set: '@fortawesome/free-brands-svg-icons',
-        icons: ['fab']
+        icons: ['fab'],
       },
       {
         set: '@fortawesome/free-regular-svg-icons',
-        icons: ['far']
-      }
-    ]
+        icons: ['far'],
+      },
+    ],
   },
   styleResources: {
-    stylus: ['@/assets/stylus/mixins.styl']
+    stylus: ['@/assets/stylus/mixins.styl'],
   },
   googleAnalytics: {
-    id: 'UA-141919453-1'
-  }
+    id: 'UA-141919453-1',
+  },
+  i18n: {},
+  sitemap: {
+    hostname: 'https://nadeshikokaruta.com',
+  },
 }
 
 export default config

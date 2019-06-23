@@ -17,8 +17,8 @@ import { titleModule } from '@/store'
 @Component({
   components: {
     HeaderBar,
-    FooterBar
-  }
+    FooterBar,
+  },
 })
 export default class Default extends Vue {
   get isFirstView() {
@@ -69,6 +69,7 @@ export default class Default extends Vue {
   min-width 320px
   min-height 480px
   border 15px solid #467837
+  border-image linear-gradient(to top, #467837, #589049) 1
   text-align center
 
 .header

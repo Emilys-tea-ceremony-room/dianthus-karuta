@@ -12,8 +12,8 @@ import ShareBox from '~/components/ShareBox.vue'
 
 @Component({
   components: {
-    ShareBox
-  }
+    ShareBox,
+  },
 })
 export default class FooterBar extends Vue {}
 </script>

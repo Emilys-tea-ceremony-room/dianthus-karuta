@@ -13,8 +13,8 @@ import { titleModule } from '@/store'
 
 @Component({
   components: {
-    Sakura
-  }
+    Sakura,
+  },
 })
 export default class Index extends Vue {
   get isFirstView() {

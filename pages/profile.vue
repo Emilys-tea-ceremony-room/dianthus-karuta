@@ -30,8 +30,8 @@ import Sakura from '~/components/Sakura.vue'
 
 @Component({
   components: {
-    Sakura
-  }
+    Sakura,
+  },
 })
 export default class Profile extends Vue {}
 </script>

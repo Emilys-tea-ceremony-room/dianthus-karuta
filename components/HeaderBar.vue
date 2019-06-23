@@ -28,8 +28,8 @@ import { titleModule } from '@/store'
 
 @Component({
   components: {
-    SiteMenu
-  }
+    SiteMenu,
+  },
 })
 export default class HeaderBar extends Vue {
   get isFirstView() {
@@ -46,6 +46,7 @@ export default class HeaderBar extends Vue {
   position absolute
   top 0
   left 0
+  z-index 5
   display flex
   justify-content space-around
   width 100%
