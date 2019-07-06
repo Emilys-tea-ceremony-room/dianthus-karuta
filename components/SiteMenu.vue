@@ -66,7 +66,7 @@ export default class SiteMenu extends Vue {
   z-index 10
   width 40px
   height 40px
-  background-color rgba(255, 255, 255, 0.2)
+  background-color rgba(255, 255, 255, 0.4)
   cursor pointer
   & span
     position absolute

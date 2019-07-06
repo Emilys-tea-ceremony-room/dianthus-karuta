@@ -131,6 +131,9 @@ export default class HeaderBar extends Vue {
     display flex
   justify-content space-between
   font-size 20px
+  .title .first-view &
+    opacity 0
+    animation arrival 1s ease-in-out 3.2s forwards
 
 .link-container a
   display flex
