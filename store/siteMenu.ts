@@ -19,11 +19,11 @@ export default class SiteMenu extends VuexModule {
     //   name: '活動記録',
     //   nameEn: 'History',
     // },
-    // {
-    //   link: '/discography',
-    //   name: '作品目録',
-    //   nameEn: 'Discography',
-    // },
+    {
+      link: '/discography',
+      name: '作品目録',
+      nameEn: 'Discography',
+    },
     // {
     //   link: '/',
     //   name: '撫子歌留多',

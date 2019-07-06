@@ -114,6 +114,7 @@ export default class SiteMenu extends Vue {
     transform translateY(0)
 
 .menu-item
+  position relative
   padding 10px
   color #f8f8f8
   letter-spacing 0
@@ -121,7 +122,7 @@ export default class SiteMenu extends Vue {
   for i in (1 .. 12)
     .menu-active &:nth-child({i})
       opacity 0
-      animation fade-in 1s 0.2 + 0.1 * i s forwards
+      animation fade-in 1s (0.2 + 0.1 * i)s forwards
   & a
     display inline
     color #161616
@@ -130,6 +131,20 @@ export default class SiteMenu extends Vue {
     white-space nowrap
     line-height 40%
     writing-mode horizontal-tb
+    & > span::after
+      position absolute
+      bottom 0.95em
+      left 50%
+      display block
+      width 0
+      height 1px
+      background-color #161616
+      content ''
+      transition 0.5s all
+      transform translateX(-50%)
+    &:hover
+      & > span::after
+        width 5em
     & span
       text-shadow 0px 0px 6px #fff
       &.en
