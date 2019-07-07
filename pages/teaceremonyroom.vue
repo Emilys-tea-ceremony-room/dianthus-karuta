@@ -92,6 +92,7 @@ export default class Profile extends Vue {}
   border-radius 18px
   background-color #d2d2d2
   box-shadow 0 2px 2px 0px
+  color #5E487D
   font-size 32px
   transform translateX(-50%)
   &:hover
