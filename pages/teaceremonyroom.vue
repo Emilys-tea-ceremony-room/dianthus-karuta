@@ -102,4 +102,10 @@ export default class Profile extends Vue {}
   margin 0.6em
   margin-left 1em
   font-size 14px
+
+@media screen and (max-width: 370px)
+  .tearoom-title
+    margin 0
+  .tearoom-description
+    font-size 10px
 </style>
