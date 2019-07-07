@@ -105,7 +105,7 @@ export default class SiteMenu extends Vue {
   padding-top 80px
   width 100%
   height 100%
-  background-color rgba(252, 252, 252, 0.82)
+  background-color rgba(#fcfcfc 0.86)
   opacity 0
   transition all 0.5s
   transform translateY(-100%)

@@ -34,7 +34,7 @@ export default class Index extends Vue {
 
 .background-image
   height 100%
-  background url('~assets/background/tearoom.jpg') no-repeat center
+  background url('~assets/background/tearoom_2x.png') no-repeat center
   background-size cover
   animation move 8s forwards
 

@@ -73,7 +73,7 @@ export default class Profile extends Vue {}
     left -8px
     z-index -5
     filter blur(8px)
-    background-color rgba(255, 255, 255, 0.8)
+    background-color rgba(#fcfcfc 0.74)
     content ''
 
 .name

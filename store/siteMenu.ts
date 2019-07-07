@@ -29,11 +29,11 @@ export default class SiteMenu extends VuexModule {
     //   name: '撫子歌留多',
     //   nameEn: 'Nadeshiko Karuta',
     // },
-    // {
-    //   link: '/',
-    //   name: '茶室',
-    //   nameEn: 'Tea ceremony room',
-    // },
+    {
+      link: '/teaceremonyroom',
+      name: '茶室',
+      nameEn: 'Tea ceremony room',
+    },
     // {
     //   link: '/',
     //   name: '電子案内',

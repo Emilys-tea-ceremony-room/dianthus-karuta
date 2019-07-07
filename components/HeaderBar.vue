@@ -98,7 +98,7 @@ export default class HeaderBar extends Vue {
   height 60vh
 
 .logo-title-ja-h
-  height 72px
+  height 74px
 
 .en
   letter-spacing 0

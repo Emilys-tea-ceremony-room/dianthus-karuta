@@ -133,5 +133,5 @@ export default class Discography extends Vue {
   margin-top 80px
   width 100%
   +tablet()
-    width 72%
+    width 74%
 </style>
