@@ -78,7 +78,7 @@ export default class Profile extends Vue {}
   line-height 2em
   +tablet()
     font-size 15px
-  a
+  & p a
     color #5E487D
     text-decoration underline
 
