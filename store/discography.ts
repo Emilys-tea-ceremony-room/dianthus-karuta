@@ -26,26 +26,47 @@ export interface IDiscography {
 @Module({ namespaced: true, name: 'discography', stateFactory: true })
 export default class Discography extends VuexModule implements IDiscography {
   data = [
-    /* {
-      title: 'THE IDOLM@STER MILLION THE@TER Wave',
-      productNumber: '',
-      releaseDate: new Date(''),
+    {
+      title: 'THE IDOLM@STER MILLION THE@TER WAVE 01 Flyers!!!',
+      productNumber: '-',
+      releaseDate: new Date('2019-07-24'),
       price: 0,
-      distributor:
-        '',
-      jacketSource: require('@/assets/discography/MTG14.jpg'),
+      distributor: 'Lantis',
+      youtube_id: 'O7zMActeP1A',
+      jacketSource: require('@/assets/discography/MTW01.png'),
       index: [
         {
-          title: 'だってあなたはプリンセス',
-          artist: ['Charlotte・Charlotte [徳川まつり、エミリー スチュアート]'],
-          words: ['新田目駿'],
-          music: ['新田目駿'],
-          arrangement: ['KOH'],
+          title: 'Flayers!!!',
+          artist: ['765 MILLION ALLSTARS'],
+          words: ['唐沢美帆'],
+          music: ['新田目翔'],
+          arrangement: ['新田目翔'],
+        },
+        {
+          title: 'Justice OR Voice',
+          artist: [
+            'ジェネシスxネメシス[白石紬、桜守歌織、ジュリア、菊地真、野々原茜]',
+          ],
+          words: ['真崎エリカ'],
+          music: ['矢鴇つかさ (Arte Refact)'],
+          arrangement: ['矢鴇つかさ (Arte Refact)'],
+        },
+        {
+          title: 'White Vows',
+          artist: [
+            '豊川風花',
+            '馬場このみ',
+            '百瀬莉緒',
+            '桜守歌織',
+            '二階堂千鶴',
+          ],
+          words: ['結城アイラ'],
+          music: ['遠藤直弥'],
+          arrangement: ['遠藤直弥'],
         },
       ],
-      comment:
-        '',
-    }, */
+      comment: '',
+    },
     {
       title:
         'THE IDOLM@STER MILLION THE@TER GENERATION 14 Charlotte・Charlotte',
@@ -54,6 +75,7 @@ export default class Discography extends VuexModule implements IDiscography {
       price: 1500,
       distributor:
         '株式会社バンダイナムコアーツ © BANDAI NAMCO Entertainment Inc.',
+      youtube_id: '8ThaAND6JTc',
       jacketSource: require('@/assets/discography/MTG14.jpg'),
       index: [
         {
@@ -80,6 +102,7 @@ export default class Discography extends VuexModule implements IDiscography {
       releaseDate: new Date('2018-01-10'),
       price: 2000,
       distributor: 'Lantis',
+      youtube_id: 'ImGjRmpvvCE',
       jacketSource: require('@/assets/discography/MS05.jpg'),
       index: [
         {
@@ -128,6 +151,7 @@ export default class Discography extends VuexModule implements IDiscography {
       price: 2500,
       distributor:
         '株式会社バンダイナムコアーツ ©BANDAI NAMCO Entertainment Inc.',
+      youtube_id: 'cxtxp2FXh-U',
       jacketSource: require('@/assets/discography/MTG11.jpg'),
       index: [
         {
@@ -154,6 +178,7 @@ export default class Discography extends VuexModule implements IDiscography {
       releaseDate: new Date('2018-01-31'),
       price: 1500,
       distributor: 'Lantis',
+      youtube_id: 'do_JVQZGqXE',
       jacketSource: require('@/assets/discography/MTG04.jpg'),
       index: [
         {
@@ -184,6 +209,7 @@ export default class Discography extends VuexModule implements IDiscography {
       releaseDate: new Date('2017-07-26'),
       price: 1300,
       distributor: 'Lantis',
+      youtube_id: '2ELtcG7sRCU',
       jacketSource: require('@/assets/discography/MTG01.png'),
       index: [
         {
@@ -217,6 +243,8 @@ export default class Discography extends VuexModule implements IDiscography {
       releaseDate: new Date('2016-12-07'),
       price: 2000,
       distributor: 'Lantis',
+      youtube_id: 'PQnJn7UzYPE',
+      youtube_start: 105,
       jacketSource: require('@/assets/discography/LTF01.png'),
       index: [
         {
@@ -263,9 +291,10 @@ export default class Discography extends VuexModule implements IDiscography {
     {
       title: 'THE IDOLM@STER LIVE THE@TER DREAMERS 04',
       productNumber: 'LACA-15524',
-      releaseDate: new Date('2015−12−13'),
+      releaseDate: new Date('2015-12-13'),
       price: 2300,
       distributor: 'Lantis',
+      youtube_id: '07I9PzC_geg',
       jacketSource: require('@/assets/discography/LTD04.png'),
       index: [
         {
@@ -321,6 +350,8 @@ export default class Discography extends VuexModule implements IDiscography {
       releaseDate: new Date('2014-09-24'),
       price: 2300,
       distributor: 'Lantis',
+      youtube_id: '-dxufzS0ff0',
+      youtube_start: '86',
       jacketSource: require('@/assets/discography/LTH04.png'),
       index: [
         {
@@ -386,6 +417,7 @@ export default class Discography extends VuexModule implements IDiscography {
       releaseDate: new Date('2013-08-28'),
       price: 1905,
       distributor: 'Lantis',
+      youtube_id: 'sc61TVMYuEk',
       jacketSource: require('@/assets/discography/LTP05.png'),
       index: [
         {
@@ -430,10 +462,11 @@ export default class Discography extends VuexModule implements IDiscography {
     {
       title: 'THE IDOLM@STER LIVE THE@TER PERFORMANCE 01 Thank You!',
       productNumber: 'LACM-14080',
-      releaseDate: new Date('2013−04−24'),
+      releaseDate: new Date('2013-04-24'),
       price: 952,
       distributor: 'Lantis',
       jacketSource: require('@/assets/discography/LTP01.png'),
+      youtube_id: 'KaOo73W_GS8',
       index: [
         {
           title: 'Thank You!',

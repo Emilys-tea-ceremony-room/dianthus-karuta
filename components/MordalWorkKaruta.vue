@@ -9,6 +9,10 @@
       .product-number {{ work.productNumber }}
       .price ¥{{ work.price }} (税抜価格)
       .distributer {{ work.distributer }}
+      iframe.audition(
+        :src="'https://www.youtube.com/embed/' + work.youtube_id + '?autoplay=1&controls=2&modestbranding=1&showinfo=0&rel=0&start=' + work.youtube_start"
+        frameborder="0"
+        allowfullscreen)
       .index
         .song(v-for="song, index in work.index")
           .song-title
@@ -116,6 +120,9 @@ export default class MordalWorkKaruta extends Vue {
 
 .price
   text-align right
+
+.audition
+  max-width 100%
 
 .song
   &:not(:last-child)

@@ -24,14 +24,11 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import Sakura from '~/components/Sakura.vue'
 
 @Component({
-  components: {
-    Sakura,
-  },
+  components: {},
 })
-export default class Profile extends Vue {}
+export default class TeaCeremonyRoom extends Vue {}
 </script>
 
 <style lang="stylus" scoped>
