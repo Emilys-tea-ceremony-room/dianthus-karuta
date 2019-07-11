@@ -35,6 +35,7 @@ export default class HeaderBar extends Vue {
   get isFirstView() {
     return titleModule.isFirstView
   }
+
   get isTitle() {
     return this.$route.path === '/'
   }

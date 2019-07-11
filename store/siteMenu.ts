@@ -3,6 +3,7 @@ import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators'
 @Module({ namespaced: true, name: 'siteMenu', stateFactory: true })
 export default class SiteMenu extends VuexModule {
   isMenuActive = false
+
   menuItems = [
     // {
     //   link: '/',
@@ -45,6 +46,7 @@ export default class SiteMenu extends VuexModule {
   CLOSE_MENU() {
     this.isMenuActive = false
   }
+
   @Mutation
   OPEN_MENU() {
     this.isMenuActive = true

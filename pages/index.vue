@@ -20,6 +20,7 @@ export default class Index extends Vue {
   get isFirstView() {
     return titleModule.isFirstView
   }
+
   beforeRouteLeave(to, from, next) {
     titleModule.SET_VIEWED()
     next()

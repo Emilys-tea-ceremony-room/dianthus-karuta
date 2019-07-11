@@ -35,6 +35,7 @@ import { siteMenuModule } from '@/store'
 @Component
 export default class SiteMenu extends Vue {
   el
+
   get menuItems() {
     return siteMenuModule.menuItems
   }

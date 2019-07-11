@@ -1,39 +1,42 @@
 <template lang="pug">
-.mordal-background(v-if="isWorkSelected" @click="close")
-  .karuta
-    .karuta-image
-      img(:src="work.jacketSource")
-    .karuta-description
-      .title {{ work.title }}
-      .release-date {{ getReleaseDateStr }}
-      .product-number {{ work.productNumber }}
-      .price ¥{{ work.price }} (税抜価格)
-      .distributer {{ work.distributer }}
-      iframe.audition(
-        :src="'https://www.youtube.com/embed/' + work.youtube_id + '?autoplay=1&controls=2&modestbranding=1&showinfo=0&rel=0&start=' + work.youtube_start"
-        frameborder="0"
-        allowfullscreen)
-      .index
-        .song(v-for="song, index in work.index")
-          .song-title
-            | {{ index + 1 }}. {{ song.title }}
-          .song-description
-            .song-artists
-              span 歌
-              .artist(v-for="artist in song.artist")
-                | {{ artist }}
-            .song-words
-              span 作詞
-              .words(v-for="words in song.words")
-                | {{ words }}
-            .song-musics
-              span 作曲
-              .music(v-for="music in song.music")
-                | {{ music }}
-            .song-arrangements
-              span 編曲
-              .arrangement(v-for="arrangement in song.arrangement")
-                | {{ arrangement }}
+transition(name="fade")
+  .mordal-background(v-if="isWorkSelected" @click="close")
+    .karuta
+      .karuta-image
+        img(:src="work.jacketSource")
+      .karuta-description
+        .title {{ work.title }}
+        .release-date {{ getReleaseDateStr }}
+        .product-number {{ work.productNumber }}
+        .price ¥{{ work.price }} (税抜価格)
+        .distributer {{ work.distributer }}
+        .audition
+          iframe(
+            :src="'https://www.youtube.com/embed/' + work.youtube_id + '?autoplay=1&controls=2&modestbranding=1&showinfo=0&rel=0&start=' + work.youtube_start"
+            frameborder="0"
+            allowfullscreen
+          )
+        .index
+          .song(v-for="song, index in work.index")
+            .song-title
+              | {{ index + 1 }}. {{ song.title }}
+            .song-description
+              .song-artists
+                span 歌
+                .artist(v-for="artist in song.artist")
+                  | {{ artist }}
+              .song-words
+                span 作詞
+                .words(v-for="words in song.words")
+                  | {{ words }}
+              .song-musics
+                span 作曲
+                .music(v-for="music in song.music")
+                  | {{ music }}
+              .song-arrangements
+                span 編曲
+                .arrangement(v-for="arrangement in song.arrangement")
+                  | {{ arrangement }}
 </template>
 
 <script lang="ts">
@@ -70,6 +73,12 @@ export default class MordalWorkKaruta extends Vue {
 </script>
 
 <style lang="stylus" scoped>
+.fade-enter-active, .fade-leave-active
+  transition opacity 0.2s
+
+.fade-enter, .fade-leave-to
+  opacity 0
+
 .mordal-background
   position fixed
   top 95px
@@ -122,7 +131,16 @@ export default class MordalWorkKaruta extends Vue {
   text-align right
 
 .audition
-  max-width 100%
+  position relative
+  padding-bottom 56.25%
+  width 100%
+  height 0px
+  & iframe
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
 
 .song
   &:not(:last-child)

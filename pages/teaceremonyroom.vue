@@ -91,6 +91,7 @@ export default class TeaCeremonyRoom extends Vue {}
   box-shadow 0 2px 2px 0px
   color #5E487D
   font-size 32px
+  transition all 0.2s
   transform translateX(-50%)
   &:hover
     box-shadow 0 4px 2px 0px
