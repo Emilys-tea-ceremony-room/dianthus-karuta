@@ -14,7 +14,7 @@ install:
   - yarn install
 
 script:
-  - echo "Skipping tests"
+  - yarn run test
   - yarn run generate
 
 deploy:

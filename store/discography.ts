@@ -28,12 +28,12 @@ export default class Discography extends VuexModule implements IDiscography {
   data = [
     {
       title: 'THE IDOLM@STER MILLION THE@TER WAVE 01 Flyers!!!',
-      productNumber: '-',
+      productNumber: 'LACM-14891',
       releaseDate: new Date('2019-07-24'),
-      price: 0,
+      price: 2800,
       distributor: 'Lantis',
-      youtube_id: 'O7zMActeP1A',
-      jacketSource: require('@/assets/discography/MTW01.png'),
+      youtube_id: 'Frh5-k6SvVI',
+      jacketSource: require('@/assets/discography/MTW01.jpg'),
       index: [
         {
           title: 'Flayers!!!',
@@ -210,7 +210,7 @@ export default class Discography extends VuexModule implements IDiscography {
       price: 1300,
       distributor: 'Lantis',
       youtube_id: '2ELtcG7sRCU',
-      jacketSource: require('@/assets/discography/MTG01.png'),
+      jacketSource: require('@/assets/discography/MTG01.jpg'),
       index: [
         {
           title: 'Brand New Theater!',
@@ -245,7 +245,7 @@ export default class Discography extends VuexModule implements IDiscography {
       distributor: 'Lantis',
       youtube_id: 'PQnJn7UzYPE',
       youtube_start: 105,
-      jacketSource: require('@/assets/discography/LTF01.png'),
+      jacketSource: require('@/assets/discography/LTF01.jpg'),
       index: [
         {
           title: 'ランニング・ハイッ',
@@ -295,7 +295,7 @@ export default class Discography extends VuexModule implements IDiscography {
       price: 2300,
       distributor: 'Lantis',
       youtube_id: '07I9PzC_geg',
-      jacketSource: require('@/assets/discography/LTD04.png'),
+      jacketSource: require('@/assets/discography/LTD04.jpg'),
       index: [
         {
           title: 'Dreaming!',
@@ -352,7 +352,7 @@ export default class Discography extends VuexModule implements IDiscography {
       distributor: 'Lantis',
       youtube_id: '-dxufzS0ff0',
       youtube_start: '86',
-      jacketSource: require('@/assets/discography/LTH04.png'),
+      jacketSource: require('@/assets/discography/LTH04.jpg'),
       index: [
         {
           title: 'Eternal Harmony',
@@ -418,7 +418,7 @@ export default class Discography extends VuexModule implements IDiscography {
       price: 1905,
       distributor: 'Lantis',
       youtube_id: 'sc61TVMYuEk',
-      jacketSource: require('@/assets/discography/LTP05.png'),
+      jacketSource: require('@/assets/discography/LTP05.jpg'),
       index: [
         {
           title: '微笑み日和',
@@ -465,7 +465,7 @@ export default class Discography extends VuexModule implements IDiscography {
       releaseDate: new Date('2013-04-24'),
       price: 952,
       distributor: 'Lantis',
-      jacketSource: require('@/assets/discography/LTP01.png'),
+      jacketSource: require('@/assets/discography/LTP01.jpg'),
       youtube_id: 'KaOo73W_GS8',
       index: [
         {

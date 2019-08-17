@@ -62,7 +62,7 @@ export default class Discography extends Vue {
   align-items center
   min-height 100%
   width 100%
-  background url('~assets/background/tatami.png') center
+  background url('~assets/background/tatami.jpg') center
   background-position top center
 
 .discography-menu

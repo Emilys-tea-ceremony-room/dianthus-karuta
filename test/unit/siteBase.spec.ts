@@ -1,6 +1,6 @@
-import title, { ITitle } from '@/store/title'
 import Vuex from 'vuex'
 import Vue from 'vue'
+import title, { ITitle } from '@/store/title'
 Vue.use(Vuex)
 
 describe('siteBase', () => {

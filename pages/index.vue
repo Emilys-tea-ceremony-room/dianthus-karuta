@@ -1,7 +1,7 @@
 <template lang="pug">
 .container
   //- .emily
-  //-   img(src="@/assets/home_emily.png")
+  //-   img(src="@/assets/home_emily.jpg")
   sakura
   .background-image
 </template>
@@ -35,7 +35,7 @@ export default class Index extends Vue {
 
 .background-image
   height 100%
-  background url('~assets/background/tearoom_2x.png') no-repeat center
+  background url('~assets/background/tearoom_2x.jpg') no-repeat center
   background-size cover
   animation move 8s forwards
 

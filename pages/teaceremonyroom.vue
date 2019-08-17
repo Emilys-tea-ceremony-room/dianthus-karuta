@@ -41,7 +41,7 @@ export default class TeaCeremonyRoom extends Vue {}
   width 100%
   height 100%
   border-top 30px
-  background url('~assets/teaceremonyroom/tearoom_background.png') no-repeat center
+  background url('~assets/teaceremonyroom/tearoom_background.jpg') no-repeat center
   background-position center center
   background-size cover
 

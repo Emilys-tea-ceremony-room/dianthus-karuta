@@ -41,7 +41,11 @@ export default class SiteMenu extends Vue {
   }
 
   get isMenuActive() {
-    return siteMenuModule.isMenuActive
+    return this.isTitle ? true : siteMenuModule.isMenuActive
+  }
+
+  get isTitle() {
+    return this.$route.path === '/'
   }
 
   toggleMenu() {
@@ -93,6 +97,8 @@ export default class SiteMenu extends Vue {
       opacity 0
     &:nth-child(3)
       transform translateY(-5px) rotate(-45deg)
+  .home &
+    display none
 
 .navbar-menu
   position absolute
@@ -110,6 +116,11 @@ export default class SiteMenu extends Vue {
   opacity 0
   transition all 0.5s
   transform translateY(-100%)
+  .home &
+    right 0
+    left auto
+    width 40%
+    background-color rgba(#fcfcfc 0.62)
   &.menu-active
     opacity 1
     transform translateY(0)

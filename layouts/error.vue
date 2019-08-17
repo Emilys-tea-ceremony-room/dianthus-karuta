@@ -28,7 +28,7 @@ export default class Error extends Vue {}
   left -20%
   width 100%
   height 80%
-  background url('~assets/404_emily.png') no-repeat center
+  background url('~assets/404_emily.jpg') no-repeat center
   background-size auto 100%
 
 .error
