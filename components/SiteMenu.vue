@@ -119,7 +119,7 @@ export default class SiteMenu extends Vue {
   .home &
     right 0
     left auto
-    width 40%
+    width 30%
     background-color rgba(#fcfcfc 0.62)
   &.menu-active
     opacity 1
