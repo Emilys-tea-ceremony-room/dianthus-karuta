@@ -1,6 +1,6 @@
-import NuxtConfiguration from '@nuxt/config'
+import { Configuration } from '@nuxt/types'
 
-const config: NuxtConfiguration = {
+const config: Configuration = {
   mode: 'spa',
   /*
    ** Headers of the page
@@ -82,6 +82,20 @@ const config: NuxtConfiguration = {
      ** You can extend webpack config here
      */
   },
+  buildModules: [
+    [
+      '@nuxt/typescript-build',
+      {
+        typeCheck: true,
+        ignoreNotFoundWarnings: true,
+      },
+    ],
+  ],
+  typescript: {
+    typeCheck: {
+      eslint: true,
+    },
+  },
   fontawesome: {
     imports: [
       {
@@ -107,6 +121,12 @@ const config: NuxtConfiguration = {
   i18n: {},
   sitemap: {
     hostname: 'https://nadeshikokaruta.com',
+    filter: ({ routes }) => {
+      return routes.map(route => {
+        route.url = `${route.url}/`
+        return route
+      })
+    },
   },
 }
 

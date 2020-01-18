@@ -21,7 +21,7 @@ export default class Index extends Vue {
     return titleModule.isFirstView
   }
 
-  beforeRouteLeave(to, from, next) {
+  beforeRouteLeave(_to, _from, next) {
     titleModule.SET_VIEWED()
     next()
   }

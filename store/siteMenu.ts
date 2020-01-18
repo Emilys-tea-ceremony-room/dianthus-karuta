@@ -26,7 +26,7 @@ export default class SiteMenu extends VuexModule {
       nameEn: 'Discography',
     },
     // {
-    //   link: '/',
+    //   link: '/karuta',
     //   name: '撫子歌留多',
     //   nameEn: 'Nadeshiko Karuta',
     // },
