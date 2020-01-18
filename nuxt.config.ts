@@ -118,7 +118,16 @@ const config: Configuration = {
   googleAnalytics: {
     id: 'UA-141919453-1',
   },
-  i18n: {},
+  i18n: {
+    locales: ['ja'],
+    defaultLocale: 'ja',
+    vueI18n: {
+      fallbackLocale: 'ja',
+      messages: {
+        ja: {},
+      },
+    },
+  },
   sitemap: {
     hostname: 'https://nadeshikokaruta.com',
     filter: ({ routes }) => {
