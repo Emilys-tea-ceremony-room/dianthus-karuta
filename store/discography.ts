@@ -27,6 +27,45 @@ export interface IDiscography {
 export default class Discography extends VuexModule implements IDiscography {
   data = [
     {
+      title: 'THE IDOLM@STER THE@TER CHALLENGE 02',
+      productNumber: 'LACM-14948',
+      releaseDate: new Date('2019-11-27'),
+      price: 1500,
+      distributor:
+        '株式会社バンダイナムコアーツ ©窪岡俊之 ©BANDAI NAMCO Entertainment Inc.',
+      youtube_id: 'b2iDl47mMso',
+      jacketSource: require('@/assets/discography/TC02.jpg'),
+      index: [
+        {
+          title: 'World Changer',
+          artist: [
+            '如月千早',
+            '星井美希',
+            'エミリー スチュアート',
+            '菊地 真',
+            '天海春香',
+          ],
+          words: ['半田 翼', '新田目 翔'],
+          music: ['半田 翼'],
+          arrangement: ['半田 翼'],
+        },
+        {
+          title: 'DIAMOND DAYS',
+          artist: [
+            '如月千早',
+            '星井美希',
+            'エミリー スチュアート',
+            '菊地 真',
+            '天海春香',
+          ],
+          words: ['rino'],
+          music: ['高田 暁'],
+          arrangement: ['高田 暁'],
+        },
+      ],
+      comment: '',
+    },
+    {
       title: 'THE IDOLM@STER MILLION THE@TER WAVE 01 Flyers!!!',
       productNumber: 'LACM-14891',
       releaseDate: new Date('2019-07-24'),
@@ -39,8 +78,8 @@ export default class Discography extends VuexModule implements IDiscography {
           title: 'Flayers!!!',
           artist: ['765 MILLION ALLSTARS'],
           words: ['唐沢美帆'],
-          music: ['新田目翔'],
-          arrangement: ['新田目翔'],
+          music: ['新田目 翔'],
+          arrangement: ['新田目 翔'],
         },
         {
           title: 'Justice OR Voice',
@@ -150,7 +189,7 @@ export default class Discography extends VuexModule implements IDiscography {
       releaseDate: new Date('2018-08-29'),
       price: 2500,
       distributor:
-        '株式会社バンダイナムコアーツ ©BANDAI NAMCO Entertainment Inc.',
+        '株式会社バンダイナムコアーツ ©窪岡俊之 ©BANDAI NAMCO Entertainment Inc.',
       youtube_id: 'cxtxp2FXh-U',
       jacketSource: require('@/assets/discography/MTG11.jpg'),
       index: [
