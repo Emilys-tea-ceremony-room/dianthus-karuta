@@ -27,6 +27,33 @@ export interface IDiscography {
 export default class Discography extends VuexModule implements IDiscography {
   data = [
     {
+      title: 'THE IDOLM@STER MILLION THE@TER WAVE 06 花咲夜',
+      productNumber: 'LACM-14896',
+      releaseDate: new Date('2020-02-26'),
+      price: 1500,
+      distributor:
+        '株式会社バンダイナムコアーツ ©窪岡俊之 ©BANDAI NAMCO Entertainment Inc.',
+      youtube_id: 'ppup5IOySU4',
+      jacketSource: require('@/assets/discography/MTW06.jpg'),
+      index: [
+        {
+          title: '百花は月下に散りぬるを',
+          artist: ['花咲夜[エミリー スチュアート、白石 紬、天空橋朋花]'],
+          words: ['藤本記子'],
+          music: ['藤本記子'],
+          arrangement: ['福富雅之'],
+        },
+        {
+          title: '矛盾の月',
+          artist: ['花咲夜[エミリー スチュアート、白石 紬、天空橋朋花]'],
+          words: ['藤本記子'],
+          music: ['藤本記子'],
+          arrangement: ['福富雅之'],
+        },
+      ],
+      comment: '',
+    },
+    {
       title: 'THE IDOLM@STER THE@TER CHALLENGE 02',
       productNumber: 'LACM-14948',
       releaseDate: new Date('2019-11-27'),
