@@ -28,6 +28,11 @@ export default class Default extends Vue {
   get isTitle() {
     return this.$route.path === '/'
   }
+
+  mounted() {
+    // eslint-disable-next-line no-undef
+    Typekit.load({ async: true })
+  }
 }
 </script>
 

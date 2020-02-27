@@ -69,6 +69,7 @@ export default class TeaCeremonyRoom extends Vue {}
 
 .tearoom-title
   margin 8px
+  font-family ro-nikkatsu-sei-kai-std
 
 .tearoom-description
   font-size 13px

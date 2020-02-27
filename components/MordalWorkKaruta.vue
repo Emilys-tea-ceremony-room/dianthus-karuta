@@ -119,7 +119,8 @@ export default class MordalWorkKaruta extends Vue {
   flex-glow 1
 
 .title
-  font-size 14px
+  font-size 16px
+  font-family ro-nikkatsu-sei-kai-std
 
 .release-date
   text-align right
@@ -147,7 +148,8 @@ export default class MordalWorkKaruta extends Vue {
     margin-bottom 20px
   &-title
     text-align left
-    font-size 12px
+    font-size 14px
+    font-family ro-nikkatsu-sei-kai-std
   &-description
     margin-left 40px
     +tablet()

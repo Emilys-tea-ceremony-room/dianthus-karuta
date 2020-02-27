@@ -113,6 +113,7 @@ export default class SiteMenu extends Vue {
   width 100%
   height 100%
   background-color rgba(#fcfcfc 0.86)
+  font-family ro-nikkatsu-sei-kai-std
   opacity 0
   transition all 0.5s
   transform translateY(-100%)

@@ -32,7 +32,7 @@ export default class WorkKaruta extends Vue {
     width 28%
   &::before
     display block
-    padding-top calc((400% / 3))
+    padding-top calc((750% / 5))
     width 100%
     content ''
 
@@ -66,5 +66,6 @@ export default class WorkKaruta extends Vue {
   flex-grow 1
   justify-content center
   align-items center
-  font-size 9px
+  font-size 12px
+  font-family ro-nikkatsu-sei-kai-std
 </style>

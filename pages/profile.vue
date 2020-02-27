@@ -78,9 +78,10 @@ export default class Profile extends Vue {}
 
 .name
   text-align center
+  font-family ro-nikkatsu-sei-kai-std
   &_en
     text-align center
-    font-size 10px
+    font-size 90%
 
 .detail
   display flex
