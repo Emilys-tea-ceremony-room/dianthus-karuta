@@ -38,14 +38,14 @@ export default class Discography extends VuexModule implements IDiscography {
       index: [
         {
           title: '百花は月下に散りぬるを',
-          artist: ['花咲夜[エミリー スチュアート、白石 紬、天空橋朋花]'],
+          artist: ['花咲夜 [エミリー スチュアート、白石 紬、天空橋朋花]'],
           words: ['藤本記子'],
           music: ['藤本記子'],
           arrangement: ['福富雅之'],
         },
         {
           title: '矛盾の月',
-          artist: ['花咲夜[エミリー スチュアート、白石 紬、天空橋朋花]'],
+          artist: ['花咲夜 [エミリー スチュアート、白石 紬、天空橋朋花]'],
           words: ['藤本記子'],
           music: ['藤本記子'],
           arrangement: ['福富雅之'],
@@ -111,7 +111,7 @@ export default class Discography extends VuexModule implements IDiscography {
         {
           title: 'Justice OR Voice',
           artist: [
-            'ジェネシスxネメシス[白石紬、桜守歌織、ジュリア、菊地真、野々原茜]',
+            'ジェネシスxネメシス [白石紬、桜守歌織、ジュリア、菊地真、野々原茜]',
           ],
           words: ['真崎エリカ'],
           music: ['矢鴇つかさ (Arte Refact)'],
