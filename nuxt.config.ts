@@ -43,7 +43,17 @@ const config: Configuration = {
       { name: 'twitter:site', content: '@Emily_Discord' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    script: [{ src: 'https://use.typekit.net/ppc5qqr.js' }],
+    script: [
+      {
+        charset: 'utf-8',
+        src: 'https://use.typekit.net/ppc5qqr.js',
+      },
+      {
+        charset: 'utf-8',
+        type: 'text/javascript',
+        innerHTML: 'try{Typekit.load({ async: true });}catch(e){}',
+      },
+    ],
   },
   /*
    ** Customize the progress-bar color
